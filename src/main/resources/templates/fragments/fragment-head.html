@@ -1,0 +1,69 @@
+<div class="layout-header-1" th:fragment="navbar">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
+        <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-1.png" alt="Icon">
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <nav class="navbar navbar-expand-lg" data-wow-delay="0.1s" style="background:#001140;">
+        <div class="row col-lg-12" style="color:white;width: 100%;">
+            <div>
+                <div class="h-100 d-inline-flex align-items-center py-3 me-3" style="color:white;">
+                    <a class="px-2" href="/cdn-cgi/l/email-protection#1b72757d745b6b7a6977727a767e756f3570697f" style="color:white;"><i class="fa fa-envelope-open text-primary me-2"></i><span class="__cf_email__" data-cfemail="cda4a3aba28dbdacbfa1a4aca0a8a3b9e3a6bfa9">[email&#160;protected]</span></a>
+                </div>
+
+                <div class="h-100 d-inline-flex align-items-center py-3 me-3" style="float:right;">
+                    <a class="btn btn-sm btn-outline-body me-1" href="" style="color:white;border-radius:5px;" th:href="@{/index?lang=ku}">کوردی</a>
+                    <a class="btn btn-sm btn-outline-body me-1" href="" style="color:white;border-radius:5px;" th:href="@{/index?lang=ar}">العربية</a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href="#" style="color:white;border-radius:5px;"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href="#" style="color:white;border-radius:5px;"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href="#" style="color:white;border-radius:5px;"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s" dir="rtl" style="text-align:center;">
+
+        <img class="me-3 p-0 wow fadeInDown" src="img/3392logo1.png" style="width:8%;" alt="Icon">
+
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" style="font-size: 50px;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-5 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active wow fadeInDown" data-wow-delay="0.1s" th:href="@{/}" th:text="#{home}">سەرەکی</a>
+                <a href="about.html" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.2s" th:href="@{/about}" th:text="#{about.us}">دەربارەی بنکەی یاسادانان</a>
+                <a href="#" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.3s" th:href="@{/constitution}" th:text="#{label.const}">دەستوری هەرێم</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle wow fadeInDown" data-bs-toggle="dropdown" data-wow-delay="0.4s" th:href="@{/krd-law}" th:text="#{kurd.law}">یاساکانی هەرێم</a>
+                    <div class="dropdown-menu border-0 m-0" style="text-align:center;">
+                        <a href="#" class="dropdown-item">گەڕان بەپێی دەروازەی یاسا</a>
+                        <a href="#" class="dropdown-item">گەڕان بەپێی ساڵی یاسا</a>
+                        <a href="#" class="dropdown-item">گەڕان بەپێی ساڵی دەرچوون</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle wow fadeInDown" data-bs-toggle="dropdown" data-wow-delay="0.5s" th:href="@{/federal-law}" th:text="#{federal.law}">یاسا ئيتحاديەكان</a>
+                    <div class="dropdown-menu border-0 m-0" style="text-align:center;">
+                        <a href="https://iraqld.e-sjc-services.iq/" class="dropdown-item">یاسا ئيتحادیەکان پێش ساڵی 1992</a>
+                        <a href="https://iraqld.e-sjc-services.iq/" class="dropdown-item">یاسا ئيتحادیەکان پاش ساڵی 2005</a>
+                    </div>
+                </div>
+                <a href="Bryara_Yasa.html" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.6s" th:href="@{/orders-law(pageNumber=${1})}" th:text="#{order.law}">بڕیارە یاسا</a>
+                <a href="#" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.7s" th:href="@{/amendments}" th:text="#{amends.law}">یاسا هەموارکراوە یەکخراوەکان</a>
+                <a href="#" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.8s" th:href="@{/terminated-law}" th:text="#{terminated.law}">یاسا هەڵوەشاوەکان</a>
+                <a href="contact.html" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.9s" th:href="@{/contact-us}" th:text="#{contact.us}">پەیوەندی</a>
+            </div>
+        </div>
+
+    </nav>
+    <!-- Navbar End -->
+</div>
+

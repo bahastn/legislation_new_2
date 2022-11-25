@@ -135,130 +135,51 @@
 <body>
 <div th:replace="fragments/fragment-head :: navbar"></div>
 
-<form action="#" method="post" th:action="@{/search}">
-    <div class="row">
-        <div class="row col-lg-8" style="text-align:center;margin:auto;width:50%;direction:rtl;border-radius:10px;">
-            <div class="input-group">
+<!--Start search result-->
+<!-- Page Header Start -->
+<div class="page-header" style="width:100%;margin-bottom:5%;">
+    <div class="container py-5" style="width:100%;direction:rtl;">
+        <h2 class="display-8 text-white">لیستی بڕیارەکان</h2>
+    </div>
+</div>
+<!-- Page Header End -->
 
-                <input type="search" class="form-control rounded" th:name="keyword" th:placeholder="#{search}" placeholder="گەڕان"
-                       aria-label="Search"
-                       aria-describedby="search-addon"/>
-                <button class="btn btn-outline-primary" th:text="#{search}">گەڕان</button>
 
+<!-- Feature Start -->
+<div class="container-xxl" dir="rtl">
+    <div class="container">
+        <div class="row g-16">
+            <div class="col-lg-12">
+                <div class="row g-12" th:each="law : ${laws}" >
+                    <div class="col-10 wow fadeInDown" data-wow-delay="0.1s">
+                        <div class="d-flex align-items-start">
+                            <img class="flex-shrink-0" src="img/icons/book.png" alt="Icon" style="padding-left:5px;width:5%;">
+                            <a href="#" style="padding:20px 0px;">
+                                <div class="ms-4">
+                                    <p class="mb-0" th:text="${law.getLawTitle()}">ساڵی 2020 بڕیاری دیاریكردنی بۆنە فەرمییەكانی پێكهاتەی توركمان</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-2 wow fadeInDown" data-wow-delay="0.1s">
+                        <div class="d-flex align-items-start">
+                            <a href="#"><img src="img/pdf.png" style="width:40px;padding-top:25px;"></a>
+                            <a href="#"><img src="img/word.png" style="width:40px;padding-top:25px;"></a>
+                        </div>
+                    </div>
+
+                    <hr>
+                </div>
             </div>
         </div>
     </div>
-</form>
-
-<div class="row">
-    <div class="row col-lg-3"></div>
-    <div class="row col-lg-6">
-        <img src="img/draw3.png" style="text-align:center;margin:auto;width:50%;">
-        <hr>
-        <p style="text-align:justify;text-justify:inter-word;direction:rtl;" th:text="#{about.introduction.paragraph}">
-            بەگوێرەی فەرمانی پەرلەمانی ژمارە (2/5/1904)
-            لە 21/8/2019 لێژنەیەك لەژمارەیەك راوێژکاری پەرلەمانی کوردستان و پسپۆری بواری تەکنەلۆژیا پێکهێنراو ڕاسپێردران
-            بە ئامادەكردنی بنکەی یاسادانانی هەرێمی كوردستان بەشێوەكی ئەلیكترونی، كە هەموو ئەو یاساو بڕیارە یاساو پەیڕەوو
-            رێنماییانە لەخۆبگرێت كە لەلایەن دامەزراوە دەستووریەكانی هەرێمەوە دەرچوون و دەردەچن، هەر لەساڵی 1992 وە
-            تاوەكو ئیستا، هەروەها ئەو یاسا ئیتحادیانەش دەگرێتەوە كە لەهەرێم بەگوێرەی یاسای دەرچووێندراو لەپەرلەمانی
-            كوردستان بەركاركراون. ئەو بنکەیە بەشێوەیەك ڕێكخراوە كەرێگەدەدات بەبەردەوامی و رۆژانە بەپێی پێویست
-            نوێبكرێتەوە.</p>
-    </div>
-    <div class="row col-lg-3"></div>
 </div>
-
-<br>
-
-<!-- Facts Start -->
-<div class="container-xxl py-5" dir="rtl">
-
-    <div class="container pt-5">
-        <div class="row g-4">
+<!-- Feature End -->
 
 
-            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.1s">
-                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
-                    <div class="fact-icon">
-                        <i class="fa fa-book" style="font-size:60px;"></i>
-                    </div>
-                    <h5 class="mb-3" th:text="#{about.us}">دەربارەی بنکەی یاسادانان</h5>
+<!--end search result-->
 
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.2s">
-                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
-                    <div class="fact-icon">
-                        <i class="fa fa-book" style="font-size:60px;"></i>
-                    </div>
-                    <h5 class="mb-3" th:text="#{constitution}">دەستوری هەرێم</h5>
-
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.3s">
-                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
-                    <div class="fact-icon">
-                        <i class="fa fa-book" style="font-size:60px;"></i>
-                    </div>
-                    <h5 class="mb-3" th:text="#{kurd.law}">یاساکانی هەرێم</h5>
-
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.4s">
-                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
-                    <div class="fact-icon">
-                        <i class="fa fa-book" style="font-size:60px;"></i>
-                    </div>
-                    <h5 class="mb-3" th:text="#{federal.law}">یاسا ئيتحاديەكان</h5>
-
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.5s">
-                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
-                    <div class="fact-icon">
-                        <i class="fa fa-book" style="font-size:60px;"></i>
-                    </div>
-                    <h5 class="mb-3" th:text="#{order.law}">بڕیارە یاسا</h5>
-
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.6s">
-                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
-                    <div class="fact-icon">
-                        <i class="fa fa-book" style="font-size:60px;"></i>
-                    </div>
-                    <h5 class="mb-3" th:text="#{amends.law}">یاسا هەموارکراوە یەکخراوەکان</h5>
-
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.7s">
-                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
-                    <div class="fact-icon">
-                        <i class="fa fa-book" style="font-size:60px;"></i>
-                    </div>
-                    <h5 class="mb-3" th:text="#{terminated.law}">یاسا هەڵوەشاوەکان</h5>
-
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.8s">
-                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
-                    <div class="fact-icon">
-                        <i class="fa fa-book" style="font-size:60px;"></i>
-                    </div>
-                    <h5 class="mb-3" th:text="#{law.protocal.list}">پڕۆتۆکۆل</h5>
-
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-</div>
-<!-- Facts End -->
-
-<!--    footer Fragments-->
 <footer th:replace="fragments/fragment-footer :: footer"></footer>
-
-
 <!-- JavaScript Libraries -->
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

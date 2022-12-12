@@ -1,30 +1,8 @@
 package krd.legislation.legislation2.models;
 
-import javax.persistence.*;
+public enum LawType {
+    KURDISTAN_LAW_BEFORE_1992,
+    KURDISTAN_LAW_AFTER_1992,
+    FEDERAL_LAW
 
-@Entity
-@Table(name = "LAW_TYPE")
-public class LawType {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long lawTypeId;
-    private String lawTypeName;
-
-    public Long getLawTypeId() {
-        return lawTypeId;
-    }
-
-    public void setLawTypeId(Long lawTypeId) {
-        this.lawTypeId = lawTypeId;
-    }
-
-    @Basic
-    @Column(name = "LAW_TYPE", unique = true)
-    public String getLawTypeName() {
-        return lawTypeName;
-    }
-
-    public void setLawTypeName(String lawTypeName) {
-        this.lawTypeName = lawTypeName;
-    }
 }

@@ -15,11 +15,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AdvancedSearchServices implements AdvancedSearchInt{
-    private LegislationRepository legislationRepository;
-
-    public AdvancedSearchServices(LegislationRepository legislationRepository) {
-        this.legislationRepository = legislationRepository;
-    }
+//    private LegislationRepository legislationRepository;
+//
+//    public AdvancedSearchServices(LegislationRepository legislationRepository) {
+//        this.legislationRepository = legislationRepository;
+//    }
 
     @Override
     public Page<Legislation> singleFieldSearch(String language, String keyWord, int pageNumber) {

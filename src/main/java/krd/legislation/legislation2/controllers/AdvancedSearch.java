@@ -15,14 +15,14 @@ import java.util.List;
 @Controller
 public class AdvancedSearch {
 
-    private LegislationRepository legislationRepository;
-    private AdvancedSearchServices advancedSearchServices;
-
-    public AdvancedSearch(LegislationRepository legislationRepository,
-                          AdvancedSearchServices advancedSearchServices) {
-        this.legislationRepository = legislationRepository;
-        this.advancedSearchServices = advancedSearchServices;
-    }
+//    private LegislationRepository legislationRepository;
+//    private AdvancedSearchServices advancedSearchServices;
+//
+//    public AdvancedSearch(LegislationRepository legislationRepository,
+//                          AdvancedSearchServices advancedSearchServices) {
+//        this.legislationRepository = legislationRepository;
+//        this.advancedSearchServices = advancedSearchServices;
+//    }
 
     @GetMapping("search")
     public String advancedSearch() {
@@ -43,66 +43,66 @@ public class AdvancedSearch {
         return "search";
     }
 
-    @PostMapping(value = "/search1")
-    public String getResult(@RequestParam(value = "keyword", required = false) String keyword,
-                            @RequestParam(value = "year", required = false) Integer year,
-                            @RequestParam(value = "lawNumber", required = false) Integer lawNumber,
-                            @RequestParam(value = "category", required = false) String category,
-                            @RequestParam(value = "classification", required = false) String classification,
-                            @RequestParam(value = "active", required = false) String active,
-                            Model model) {
-
-
-        String keyWords = "";
-        if(!keyword.isEmpty() && keyword.length() < 300) {
-            String[] keyWordList = keyword.split(" ");
-            String[] keyWordWithPipe = new String[keyWordList.length];
-            for (int i = 0; i < keyWordList.length; i++) {
-                if (i < keyWordList.length - 1) {
-                    keyWordWithPipe[i] = keyWordList[i] + "|";
-                } else {
-                    keyWordWithPipe[i] = keyWordList[i];
-                }
-                keyWords = keyWords + keyWordWithPipe[i];
-            }
-            keyWords = " N'"+ keyWords+"'";
-
-        }
-        else{
-            return "advanced-search";
-        }
-        Integer validLawNumber = -1;
-        if(lawNumber != null){
-            validLawNumber = lawNumber;
-        }
-
-
-        if(!keyWords.isEmpty() && year!= null  && validLawNumber > 0){
-           List<Legislation> list = legislationRepository.findByLawTitleIsContaining(keyWords, year, validLawNumber, category, classification, active);
-            model.addAttribute("laws", list );
-        }
-        if(!keyWords.isEmpty() && year == null && validLawNumber > 0){
-            List<Legislation> list = legislationRepository.findByLawTitleIsContainingNoYear(keyWords, validLawNumber, category, classification, active);
-            model.addAttribute("laws", list );
-
-        }
-         if(!keyWords.isEmpty() && year == null  && validLawNumber < 0){
-
-             List<Legislation> list = legislationRepository.findByLawTitleIsContainingNoYearNoLawNumber(keyWords, category, classification, active);
-             model.addAttribute("laws", list );
-
-        }
-         if(!keyWords.isEmpty() && year != null  && validLawNumber < 0 ){
-
-             List<Legislation> list = legislationRepository.findByLawTitleIsContainingNoLawNumber(keyWords, year, category, classification, active);
-             model.addAttribute("laws", list );
-
-        }
-
-        return "advanced-search";
-
-
-    }
+//    @PostMapping(value = "/search1")
+//    public String getResult(@RequestParam(value = "keyword", required = false) String keyword,
+//                            @RequestParam(value = "year", required = false) Integer year,
+//                            @RequestParam(value = "lawNumber", required = false) Integer lawNumber,
+//                            @RequestParam(value = "category", required = false) String category,
+//                            @RequestParam(value = "classification", required = false) String classification,
+//                            @RequestParam(value = "active", required = false) String active,
+//                            Model model) {
+//
+//
+//        String keyWords = "";
+//        if(!keyword.isEmpty() && keyword.length() < 300) {
+//            String[] keyWordList = keyword.split(" ");
+//            String[] keyWordWithPipe = new String[keyWordList.length];
+//            for (int i = 0; i < keyWordList.length; i++) {
+//                if (i < keyWordList.length - 1) {
+//                    keyWordWithPipe[i] = keyWordList[i] + "|";
+//                } else {
+//                    keyWordWithPipe[i] = keyWordList[i];
+//                }
+//                keyWords = keyWords + keyWordWithPipe[i];
+//            }
+//            keyWords = " N'"+ keyWords+"'";
+//
+//        }
+//        else{
+//            return "advanced-search";
+//        }
+//        Integer validLawNumber = -1;
+//        if(lawNumber != null){
+//            validLawNumber = lawNumber;
+//        }
+//
+//
+//        if(!keyWords.isEmpty() && year!= null  && validLawNumber > 0){
+//           List<Legislation> list = legislationRepository.findByLawTitleIsContaining(keyWords, year, validLawNumber, category, classification, active);
+//            model.addAttribute("laws", list );
+//        }
+//        if(!keyWords.isEmpty() && year == null && validLawNumber > 0){
+//            List<Legislation> list = legislationRepository.findByLawTitleIsContainingNoYear(keyWords, validLawNumber, category, classification, active);
+//            model.addAttribute("laws", list );
+//
+//        }
+//         if(!keyWords.isEmpty() && year == null  && validLawNumber < 0){
+//
+//             List<Legislation> list = legislationRepository.findByLawTitleIsContainingNoYearNoLawNumber(keyWords, category, classification, active);
+//             model.addAttribute("laws", list );
+//
+//        }
+//         if(!keyWords.isEmpty() && year != null  && validLawNumber < 0 ){
+//
+//             List<Legislation> list = legislationRepository.findByLawTitleIsContainingNoLawNumber(keyWords, year, category, classification, active);
+//             model.addAttribute("laws", list );
+//
+//        }
+//
+//        return "advanced-search";
+//
+//
+//    }
 //    private boolean intValidation(String value) {
 //        try {
 //            Integer.parseInt(value);

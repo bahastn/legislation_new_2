@@ -6,6 +6,8 @@ import krd.legislation.legislation2.repositories.LegislationRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author Bahast Saber
  * @Project legislation
@@ -15,11 +17,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AdvancedSearchServices implements AdvancedSearchInt{
-//    private LegislationRepository legislationRepository;
-//
-//    public AdvancedSearchServices(LegislationRepository legislationRepository) {
-//        this.legislationRepository = legislationRepository;
-//    }
+    private LegislationRepository legislationRepository;
+
+    public AdvancedSearchServices(LegislationRepository legislationRepository) {
+        this.legislationRepository = legislationRepository;
+    }
 
     @Override
     public Page<Legislation> singleFieldSearch(String language, String keyWord, int pageNumber) {
@@ -35,5 +37,10 @@ public class AdvancedSearchServices implements AdvancedSearchInt{
 //        }
         return  null;
 
+    }
+
+    public List<Legislation> fullTextSearch(String keyword) {
+        List<Legislation> list = legislationRepository.fullTextSearch(keyword);
+        return list;
     }
 }

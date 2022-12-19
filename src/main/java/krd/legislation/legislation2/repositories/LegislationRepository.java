@@ -1,10 +1,13 @@
 package krd.legislation.legislation2.repositories;
 
+
+
+
 import krd.legislation.legislation2.models.Legislation;
-
 import org.springframework.data.jpa.repository.JpaRepository;
-
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+import java.util.List;
 
 @Repository
 public interface LegislationRepository extends JpaRepository<Legislation, Long> {
@@ -128,8 +131,8 @@ public interface LegislationRepository extends JpaRepository<Legislation, Long> 
 //
 //
 
-
-//    ArrayList<Legislation> fullTextSearch(String keyword);
+@Query(nativeQuery = true, value = "Select * from legsilation where search @@websearch_to_tsquery('english',?1);")
+    List<Legislation> fullTextSearch(String keyword);
 }
 
 

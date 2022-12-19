@@ -15,14 +15,14 @@ import java.util.List;
 @Controller
 public class AdvancedSearch {
 
-//    private LegislationRepository legislationRepository;
-//    private AdvancedSearchServices advancedSearchServices;
-//
-//    public AdvancedSearch(LegislationRepository legislationRepository,
-//                          AdvancedSearchServices advancedSearchServices) {
-//        this.legislationRepository = legislationRepository;
-//        this.advancedSearchServices = advancedSearchServices;
-//    }
+    private LegislationRepository legislationRepository;
+    private AdvancedSearchServices advancedSearchServices;
+
+    public AdvancedSearch(LegislationRepository legislationRepository,
+                          AdvancedSearchServices advancedSearchServices) {
+        this.legislationRepository = legislationRepository;
+        this.advancedSearchServices = advancedSearchServices;
+    }
 
     @GetMapping("search")
     public String advancedSearch() {
@@ -34,11 +34,11 @@ public class AdvancedSearch {
         if(keyword.isEmpty()){
             return "index";
         }
-//        ArrayList<Legislation> list = legislationRepository.fullTextSearch(keyword);
-        List<Legislation> list = new ArrayList<>();
-        Legislation l = new Legislation();
-        l.setLawTitle("Test Law Title");
-        list.add(l);
+      List<Legislation> list = advancedSearchServices.fullTextSearch(keyword);
+//        List<Legislation> list = new ArrayList<>();
+//        Legislation l = new Legislation();
+//        l.setLawTitle("Test Law Title");
+//        list.add(l);
         model.addAttribute("laws", list );
         return "search";
     }

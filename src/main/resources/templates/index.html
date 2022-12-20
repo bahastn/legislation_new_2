@@ -22,79 +22,6 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
-    <style>
-        @font-face {
-            font-family: 'Droid Arabic Kufi';
-            font-style: normal;
-            font-weight: 400;
-            src: url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.eot);
-            src: url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.eot?#iefix) format('embedded-opentype'),
-            url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.woff2) format('woff2'),
-            url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.woff) format('woff'),
-            url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.ttf) format('truetype');
-        }
-
-        @font-face {
-            font-family: 'Droid Arabic Kufi';
-            font-style: normal;
-            font-weight: 700;
-            src: url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.eot);
-            src: url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.eot?#iefix) format('embedded-opentype'),
-            url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.woff2) format('woff2'),
-            url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.woff) format('woff'),
-            url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.ttf) format('truetype');
-        }
-
-        *{font-family:'Droid Arabic Kufi',serif;}
-        h1{font-family:'Droid Arabic Kufi',serif;}
-        h2{font-family:'Droid Arabic Kufi',serif;}
-        h3{font-family:'Droid Arabic Kufi',serif;}
-        h4{font-family:'Droid Arabic Kufi',serif;}
-        h5{font-family:'Droid Arabic Kufi',serif;}
-        p{font-family:'Droid Arabic Kufi',serif;}
-        ul{font-family:'Droid Arabic Kufi',serif;}
-        li{font-family:'Droid Arabic Kufi',serif;}
-        a{font-family:'Droid Arabic Kufi',serif;font-size:11px;}
-        .navbar-nav a{color:#001140;font-weight:bold;border-bottom: 2px solid #b78d65;font-size:15px;}
-
-        .animate-charcter {
-            text-align: center;
-            text-transform: uppercase;
-            background-image: linear-gradient(
-                    -225deg,
-                    #231557 0%,
-                    #44107a 29%,
-                    #ff1361 67%,
-                    #00a905 100%
-            );
-            background-size: auto auto;
-            background-clip: border-box;
-            background-size: 200% auto;
-            color: #fff;
-            background-clip: text;
-            text-fill-color: transparent;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: textclip 2s linear infinite;
-            font-size: 25px;
-            text-align: center;
-        }
-
-        @keyframes textclip {
-            to {
-                background-position: 200% center;
-                text-align: center;
-            }
-        }
-
-        body {
-            background-image: url('img/back55.jpg');
-            background-repeat: repeat;
-            width: 100%;
-        }
-
-    </style>
 </head>
 <body>
 <div th:replace="fragments/fragment-head :: navbar"></div>
@@ -141,76 +68,84 @@
 
 
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.1s">
+                <a th:href="@{/about}">
                 <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h5 class="mb-3" th:href="@{/about}" th:text="#{about.us}">دەربارەی بنکەی یاسادانان</h5>
-
+                    <h5 class="mb-3" th:text="#{about.us}">دەربارەی بنکەی یاسادانان</h5>
                 </div>
+                </a>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.2s">
+                <a th:href="@{/constitution}">
                 <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h5 class="mb-3" th:href="@{/constitution}" th:text="#{label.const}">دەستوری هەرێم</h5>
-
+                    <h5 class="mb-3" th:text="#{label.const}">دەستوری هەرێم</h5>
                 </div>
+                </a>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.3s">
+                <a th:href="@{/krd-law}">
                 <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h5 class="mb-3" th:href="@{/krd-law}" th:text="#{kurd.law}">یاساکانی هەرێم</h5>
-
+                    <h5 class="mb-3" th:text="#{kurd.law}">یاساکانی هەرێم</h5>
                 </div>
+                </a>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.4s">
+                <a th:href="@{/federal-law}">
                 <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h5 class="mb-3" th:href="@{/federal-law}" th:text="#{federal.law}">یاسا ئيتحاديەكان</h5>
-
+                    <h5 class="mb-3" th:text="#{federal.law}">یاسا ئيتحاديەكان</h5>
                 </div>
+                </a>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.5s">
+                <a th:href="@{/orders-law(pageNumber=${1})}">
                 <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h5 class="mb-3" th:href="@{/orders-law(pageNumber=${1})}" th:text="#{order.law}">بڕیارە یاسا</h5>
-
+                    <h5 class="mb-3" th:text="#{order.law}">بڕیارە یاسا</h5>
                 </div>
+                </a>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.6s">
+                <a th:href="@{/amendments}">
                 <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h5 class="mb-3" th:href="@{/amendments}" th:text="#{amends.law}">یاسا هەموارکراوە یەکخراوەکان</h5>
-
+                    <h5 class="mb-3" th:text="#{amends.law}">یاسا هەموارکراوە یەکخراوەکان</h5>
                 </div>
+                </a>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.7s">
+                <a th:href="@{/terminated-law}">
                 <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h5 class="mb-3" th:href="@{/terminated-law}" th:text="#{terminated.law}">یاسا هەڵوەشاوەکان</h5>
-
+                    <h5 class="mb-3" th:text="#{terminated.law}">یاسا هەڵوەشاوەکان</h5>
                 </div>
+                </a>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.8s">
+                <a th:href="@{/terminated-law}">
                 <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
                     <h5 class="mb-3" th:text="#{law.protocal.list}">پڕۆتۆکۆل</h5>
-
                 </div>
+                </a>
             </div>
 
 

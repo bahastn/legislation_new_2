@@ -1,4 +1,93 @@
 <div class="layout-header-1" th:fragment="navbar">
+    <style>
+        @font-face {
+            font-family: UniQAIDAR_SAMi;
+            src: url(uniqadir/UniQAIDAR_SAMi.woff);
+        }
+
+        * {
+            font-family: UniQAIDAR_SAMi;
+        }
+        *{font-family:'UniQAIDAR_SAMi';}
+        h1{font-family:'UniQAIDAR_SAMi';}
+        h2{font-family:'UniQAIDAR_SAMi';}
+        h3{font-family:'UniQAIDAR_SAMi';font-weight: bold;}
+        h4{font-family:'UniQAIDAR_SAMi';}
+        h5{font-family:'UniQAIDAR_SAMi';}
+        p{font-family:'UniQAIDAR_SAMi';font-weight: bold;}
+        ul{font-family:'UniQAIDAR_SAMi';}
+        li{font-family:'UniQAIDAR_SAMi';}
+        a{font-family:'UniQAIDAR_SAMi';font-size:11px;}
+        .navbar-nav a
+        {
+            border-bottom: 2px solid #b78d65;
+            margin-right: 16px;
+            padding: 15px 0;
+            font-size: 14px;
+            color: black;
+            font-weight: 900;
+        }
+
+        .animate-charcter
+        {
+            text-align:center;
+            text-transform: uppercase;
+            background-image: linear-gradient(
+                    -225deg,
+                    #231557 0%,
+                    #44107a 29%,
+                    #ff1361 67%,
+                    #00a905 100%
+            );
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 2s linear infinite;
+            font-weight:bold;
+            font-size: 16px;
+            text-align:center;
+        }
+
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+                text-align:center;
+            }
+        }
+
+
+        .mb-0{
+            color:black;
+        }
+
+        .pagination {
+            display: inline-block;
+            width: 100%;
+            padding-left: 40%;
+        }
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 10px;
+            font-family:'UniQAIDAR_SAMi';
+            font-weight:bold;
+        }
+        .pagination a.active {
+            background-color: #b78d65;
+            color: white;
+        }
+
+        .pagination a:hover:not(.active) {background-color: #ddd;}
+
+    </style>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
@@ -45,7 +134,7 @@
                     <a href="#" class="nav-link dropdown-toggle wow fadeInDown" data-bs-toggle="dropdown" data-wow-delay="0.4s" th:href="@{/krd-law}" th:text="#{kurd.law}">یاساکانی هەرێم</a>
                     <div class="dropdown-menu border-0 m-0" style="text-align:center;">
                         <a href="#" class="dropdown-item">گەڕان بەپێی دەروازەی یاسا</a>
-                        <a href="#" class="dropdown-item">گەڕان بەپێی ساڵی یاسا</a>
+                        <a href="#" class="dropdown-item">گەڕان بەپێی جۆری یاسا</a>
                         <a href="#" class="dropdown-item">گەڕان بەپێی ساڵی دەرچوون</a>
                     </div>
                 </div>

@@ -19,84 +19,7 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
-
-    <style>
-    @font-face {
-      font-family: 'Droid Arabic Kufi';
-      font-style: normal;
-      font-weight: 400;
-      src: url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.eot);
-      src: url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.eot?#iefix) format('embedded-opentype'),
-           url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.woff2) format('woff2'),
-           url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.woff) format('woff'),
-           url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Regular.ttf) format('truetype');
-    }
-
-    @font-face {
-      font-family: 'Droid Arabic Kufi';
-      font-style: normal;
-      font-weight: 700;
-      src: url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.eot);
-      src: url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.eot?#iefix) format('embedded-opentype'),
-           url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.woff2) format('woff2'),
-           url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.woff) format('woff'),
-           url(//fonts.gstatic.com/ea/droidarabickufi/v6/DroidKufi-Bold.ttf) format('truetype');
-    }
-    *{font-family:'Droid Arabic Kufi',serif;}
-    h1{font-family:'Droid Arabic Kufi',serif;}
-    h2{font-family:'Droid Arabic Kufi',serif;}
-    h3{font-family:'Droid Arabic Kufi',serif;}
-    h4{font-family:'Droid Arabic Kufi',serif;}
-    h5{font-family:'Droid Arabic Kufi',serif;}
-    p{font-family:'Droid Arabic Kufi',serif;}
-    ul{font-family:'Droid Arabic Kufi',serif;}
-    li{font-family:'Droid Arabic Kufi',serif;}
-    a{font-family:'Droid Arabic Kufi',serif;font-size:11px;}
-    .navbar-nav a{color:#001140;font-weight:bold;border-bottom: 2px solid #b78d65;font-size:15px;}
-
-    .animate-charcter
-    {
-        text-align:center;
-       text-transform: uppercase;
-      background-image: linear-gradient(
-        -225deg,
-        #231557 0%,
-        #44107a 29%,
-        #ff1361 67%,
-        #00a905 100%
-      );
-      background-size: auto auto;
-      background-clip: border-box;
-      background-size: 200% auto;
-      color: #fff;
-      background-clip: text;
-      text-fill-color: transparent;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: textclip 2s linear infinite;
-      
-          font-size: 15px;
-          text-align:center;
-    }
-    
-    @keyframes textclip {
-      to {
-        background-position: 200% center;
-        text-align:center;
-      }
-    }
-    
-    body {
-          background-image: url('img/back55.jpg');
-          background-repeat: repeat;
-          width:100%;
-        }
-    .mb-0{
-        color:black;
-    }
-    
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -107,27 +30,27 @@
     <!-- Page Header Start -->
     <div class="page-header" style="width:100%;margin-bottom:5%;">
         <div class="container py-5" style="width:100%;direction:rtl;">
-            <h2 class="display-8 text-white" th:text="${title}">لیستی بڕیارەکان</h2>
-<!--need style-->
-            <h3  th:text="#{amends.law.paragraph}" style="display: flex; justify-content: center; align-content: center; padding-top: 15px; "></h3>
+            <h3 class="display-8 text-white animate__animated animate__backInDown" th:text="${title}"></h3>
         </div>
     </div>
     <!-- Page Header End -->
 
-    
+    <div class="container-xxl animate__animated animate__backInDown" dir="rtl" style="padding-bottom:50px;">
+        <p th:text="#{amends.law.paragraph}" style="font-size: 22px;display: flex; justify-content: center; border-bottom: 2px solid #b78d65; padding-bottom: 14px; color: black; font-weight: bold;"></p>
+    </div>
     <!-- Feature Start -->
     <div class="container-xxl" dir="rtl">
         <div class="container">
             <div class="row g-16">
                 <div class="col-lg-12" th:each="law : ${laws}">
                     <div class="row g-12" >
-                        <div class="col-10 wow fadeInDown" data-wow-delay="0.1s">
+                        <div class="col-12 wow fadeInDown" data-wow-delay="0.1s">
                             <div class="d-flex align-items-start">
-                                <img class="flex-shrink-0" src="img/icons/book.png" alt="Icon" style="padding-left:5px;width:5%;">
-                                <a href="#" style="padding:20px 0px;">
-                                    <div class="ms-4">
-                                        <h4 th:href="@{/amends-detail/(name=${law.getLawTitle()})}"
-                                            th:text="${law.getLawTitle()}">بریاری ژمارە (1)</h4>
+                                <i class="fa fa-book" aria-hidden="true" style="font-size:30px;color:#b78d65;"></i>
+                                <a href="#" style="font-size:15px;">
+                                    <div class="ms-5">
+                                        <p th:href="@{/amends-detail/(name=${law.getLawTitle()})}"
+                                            th:text="${law.getLawTitle()}" style="color: black;font-size: 20px;padding-right: 10px;"></p>
                                     </div>
                                 </a>
                             </div>
@@ -139,11 +62,24 @@
                             </div>
                         </div>
                     </div>
+                    <hr>
                 </div>
             </div>
         </div>
     </div>
     <!-- Feature End -->
+
+
+    <div class="pagination">
+        <a href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+        <a href="#">1</a>
+        <a class="active" href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
 
 
 

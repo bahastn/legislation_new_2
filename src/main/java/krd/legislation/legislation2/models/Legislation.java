@@ -9,7 +9,7 @@ import java.util.List;
 
 
 @Entity
-@Table(name = "LEGSILATION")
+@Table(name = "legsilation")
 public class Legislation {
     @Id
     @Column(name = "LAW_ID")

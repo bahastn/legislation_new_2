@@ -145,7 +145,7 @@
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h5 class="mb-3" th:text="#{about.us}">دەربارەی بنکەی یاسادانان</h5>
+                    <h5 class="mb-3" th:href="@{/about}" th:text="#{about.us}">دەربارەی بنکەی یاسادانان</h5>
 
                 </div>
             </div>
@@ -154,7 +154,7 @@
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h5 class="mb-3" th:text="#{constitution}">دەستوری هەرێم</h5>
+                    <h5 class="mb-3" th:href="@{/constitution}" th:text="#{label.const}">دەستوری هەرێم</h5>
 
                 </div>
             </div>
@@ -163,7 +163,7 @@
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h5 class="mb-3" th:text="#{kurd.law}">یاساکانی هەرێم</h5>
+                    <h5 class="mb-3" th:href="@{/krd-law}" th:text="#{kurd.law}">یاساکانی هەرێم</h5>
 
                 </div>
             </div>
@@ -172,7 +172,7 @@
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h5 class="mb-3" th:text="#{federal.law}">یاسا ئيتحاديەكان</h5>
+                    <h5 class="mb-3" th:href="@{/federal-law}" th:text="#{federal.law}">یاسا ئيتحاديەكان</h5>
 
                 </div>
             </div>
@@ -181,7 +181,7 @@
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h5 class="mb-3" th:text="#{order.law}">بڕیارە یاسا</h5>
+                    <h5 class="mb-3" th:href="@{/orders-law(pageNumber=${1})}" th:text="#{order.law}">بڕیارە یاسا</h5>
 
                 </div>
             </div>
@@ -190,7 +190,7 @@
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h5 class="mb-3" th:text="#{amends.law}">یاسا هەموارکراوە یەکخراوەکان</h5>
+                    <h5 class="mb-3" th:href="@{/amendments}" th:text="#{amends.law}">یاسا هەموارکراوە یەکخراوەکان</h5>
 
                 </div>
             </div>
@@ -199,7 +199,7 @@
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h5 class="mb-3" th:text="#{terminated.law}">یاسا هەڵوەشاوەکان</h5>
+                    <h5 class="mb-3" th:href="@{/terminated-law}" th:text="#{terminated.law}">یاسا هەڵوەشاوەکان</h5>
 
                 </div>
             </div>

@@ -4,6 +4,8 @@ package krd.legislation.legislation2.repositories;
 
 
 import krd.legislation.legislation2.models.Legislation;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -23,8 +25,8 @@ public interface LegislationRepository extends JpaRepository<Legislation, Long> 
 //     * @param pageable
 //     * @return
 //     */
-//    @Query("SELECT l FROM Legislation l WHERE l.approved = 1 AND  l.lawCategory =?1 AND l.language = ?2")
-//    Page<Legislation> findLawByLawRange(String lawCategory, String language, Pageable pageable);
+    @Query("SELECT l FROM Legislation l WHERE l.approved = 1 AND  l.lawCategory =?1 AND l.language = ?2")
+    Page<Legislation> findLawByLawRange(String lawCategory, String language, Pageable pageable);
 //
 //    Legislation findByLawId(Long lawId);
 //    Legislation findByLawTitle(String lawTitle);

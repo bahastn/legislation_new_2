@@ -43,6 +43,9 @@ public class Legislation {
     private DocumentWord wordDocument;
     @ManyToOne
     private DocumentPDF pdfDocument;
+//    @ManyToOne
+//    private LawTypes lawType;
+
     private String lawType;
     private String lawType2;
     private String lawType3;

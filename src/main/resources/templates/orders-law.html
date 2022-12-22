@@ -46,7 +46,7 @@
                                 <img class="flex-shrink-0" src="img/icons/book.png" alt="Icon" style="padding-left:5px;width:5%;">
                                 <a href="#" style="padding:20px 0px;" th:href="@{/law-detail/(name=${law.getLawTitle()})}" >
                                     <div class="ms-4">
-                                        <h4 th:text="${law.getLawTitle()}">بریاری ژمارە (1)</h4>
+                                        <h6 th:text="${law.getLawTitle()}">بریاری ژمارە (1)</h6>
 <!--                                        <p class="mb-0">ساڵی 2020 بڕیاری دیاریكردنی بۆنە فەرمییەكانی پێكهاتەی توركمان</p>-->
                                     </div>
                                 </a>
@@ -68,21 +68,7 @@
 
 <!--// pagenation-->
 
-<div class="pagination" th:if="${totalPages > 1 }">
-<!--            Total Laws [[${totalItems}]]-->
-            <a th:href="@{${mapping}(pageNumber =${1})}" th:if="${currentPage != 1 && currentPage > 0 }"><i class="fa fa-arrow-left" aria-hidden="true"></i> </a>
-
-            <a th:href="@{${mapping}(pageNumber =${currentPage - 1})}" th:if="${currentPage -1 != 0 }"><i
-                    class="fas fa-backward"></i></a>
-                <span th:each="i: ${#numbers.sequence(1, totalPages)}">
-                    <a class="page-number-style" th:href="@{${mapping}(pageNumber =${i})}" th:if="${currentPage != i}">[[${i}]] </a>
-                    <span class="active" th:unless="${currentPage != i}">[[${i}]]</span> &nbsp; &nbsp;
-                </span>
-            <a th:href="@{${mapping}(pageNumber =${currentPage + 1})}" th:if="${currentPage < totalPages}"><i
-                    class="fas fa-forward"></i></a>
-
-            <a th:href="@{${mapping}(pageNumber =${totalPages})}" th:if="${currentPage < totalPages}"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-</div>
+    <div th:replace="fragments/pagination :: page"></div>
 
     <!-- Feature End -->
 

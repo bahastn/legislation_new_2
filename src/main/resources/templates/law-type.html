@@ -34,8 +34,9 @@
 </div>
 <!-- Page Header End -->
 
+<!-- bka arabi -->
 <div class="container-xxl animate__animated animate__backInDown" dir="rtl" style="padding-bottom:50px;">
-  <p style="font-size: 40px;display: flex; justify-content: center; border-bottom: 2px solid #b78d65; padding-bottom: 14px; color: black; font-weight: bold;">جۆری یاساکان</p>
+  <p style="font-size: 40px;display: flex; justify-content: center; border-bottom: 2px solid #b78d65; padding-bottom: 14px; color: black; font-weight: bold;">لیستی جۆری یاساکان</p>
 </div>
 
 <!-- Facts Start -->
@@ -43,7 +44,7 @@
   <div class="container pt-5">
     <div class="row g-4" >
       <!-- LOOP START HERE -->
-      <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s" th:each=" lawType: ${lawTypes}">
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" th:each=" lawType: ${lawTypes}">
         <div class="fact-item text-center bg-light h-100 p-5 pt-0">
           <div class="fact-icon">
             <img src="img/icons/book.png" style="width:70px;" alt="Icon">
@@ -52,25 +53,6 @@
         </div>
       </div>
       <!-- LOOP ENDS HERE -->
-
-<!--      <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">-->
-<!--        <div class="fact-item text-center bg-light h-100 p-5 pt-0">-->
-<!--          <div class="fact-icon">-->
-<!--            <img src="img/icons/book.png" style="width:70px;" alt="Icon">-->
-<!--          </div>-->
-<!--          <h3 class="mb-3">یاساشارستانیەکان</h3>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">-->
-<!--        <div class="fact-item text-center bg-light h-100 p-5 pt-0">-->
-<!--          <div class="fact-icon">-->
-<!--            <img src="img/icons/book.png" style="width:70px;" alt="Icon">-->
-<!--          </div>-->
-<!--          <h3 class="mb-3">یاساسزاییەکان</h3>-->
-<!--        </div>-->
-<!--      </div>-->
-
     </div>
   </div>
 </div>

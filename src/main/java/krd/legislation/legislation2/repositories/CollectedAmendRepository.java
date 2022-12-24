@@ -1,6 +1,9 @@
 package krd.legislation.legislation2.repositories;
 
 import krd.legislation.legislation2.models.CollectedAmend;
+import krd.legislation.legislation2.models.Legislation;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -22,4 +25,6 @@ public interface CollectedAmendRepository extends JpaRepository<CollectedAmend, 
 
     @Query("SELECT c FROM CollectedAmend c where  c.amendTitle = ?1 ")
     CollectedAmend findByAmendTitle(String name);
+    @Query("SELECT c FROM CollectedAmend c where  c.language = ?1")
+    Page<CollectedAmend> findAllAmends( String language, Pageable pageable);
 }

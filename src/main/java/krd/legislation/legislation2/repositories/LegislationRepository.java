@@ -29,7 +29,7 @@ public interface LegislationRepository extends JpaRepository<Legislation, Long> 
     Page<Legislation> findLawByLawRange(String lawCategory, String language, Pageable pageable);
 //
 //    Legislation findByLawId(Long lawId);
-//    Legislation findByLawTitle(String lawTitle);
+    Legislation findByLawTitle(String lawTitle);
 //
 //
 ////    @Query("SELECT l.issueDate FROM Legislation l WHERE l.approved = 1 AND l.classification = ?1 GROUP BY  l.issueDate order by l.issueDate DESC ")

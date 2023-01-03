@@ -46,16 +46,7 @@
     <div class="row col-lg-6">
         <img src="img/draw3.png" style="text-align:center;margin:auto;width:50%;">
         <hr>
-        <p style="text-align:justify;text-justify:inter-word;direction:rtl;" th:text="#{about.introduction.paragraph}">
-            بەگوێرەی فەرمانی پەرلەمانی ژمارە (2/5/1904)
-            لە 21/8/2019 لێژنەیەك لەژمارەیەك راوێژکاری پەرلەمانی کوردستان و پسپۆری بواری تەکنەلۆژیا پێکهێنراو ڕاسپێردران
-            بە ئامادەكردنی بنکەی یاسادانانی هەرێمی كوردستان بەشێوەكی ئەلیكترونی، كە هەموو ئەو یاساو بڕیارە یاساو پەیڕەوو
-            رێنماییانە لەخۆبگرێت كە لەلایەن دامەزراوە دەستووریەكانی هەرێمەوە دەرچوون و دەردەچن، هەر لەساڵی 1992 وە
-            تاوەكو ئیستا، هەروەها ئەو یاسا ئیتحادیانەش دەگرێتەوە كە لەهەرێم بەگوێرەی یاسای دەرچووێندراو لەپەرلەمانی
-            كوردستان بەركاركراون. ئەو بنکەیە بەشێوەیەك ڕێكخراوە كەرێگەدەدات بەبەردەوامی و رۆژانە بەپێی پێویست
-            نوێبكرێتەوە.</p>
     </div>
-    <div class="row col-lg-3"></div>
 </div>
 
 <br>
@@ -66,17 +57,6 @@
     <div class="container pt-5">
         <div class="row g-4">
 
-
-            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.1s">
-                <a th:href="@{/about}">
-                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
-                    <div class="fact-icon">
-                        <i class="fa fa-book" style="font-size:60px;"></i>
-                    </div>
-                    <h5 class="mb-3" th:text="#{about.us}">دەربارەی بنکەی یاسادانان</h5>
-                </div>
-                </a>
-            </div>
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.2s">
                 <a th:href="@{/constitution}">
                 <div class="fact-item text-center bg-light h-100 p-5 pt-0">
@@ -115,6 +95,26 @@
                     </div>
                     <h5 class="mb-3" th:text="#{order.law}">بڕیارە یاسا</h5>
                 </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.8s">
+                <a th:href="@{/terminated-law}">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <i class="fa fa-book" style="font-size:60px;"></i>
+                        </div>
+                        <h5 class="mb-3" th:text="#{law.protocal.list}">پەیڕەو</h5>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.8s">
+                <a th:href="@{/terminated-law}">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <i class="fa fa-book" style="font-size:60px;"></i>
+                        </div>
+                        <h5 class="mb-3" th:text="#{law.protocal.list}">ڕێنماییەکان</h5>
+                    </div>
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.6s">

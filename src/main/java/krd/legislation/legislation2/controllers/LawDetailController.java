@@ -22,9 +22,9 @@ private LawDetailServices lawDetailServices;
     }
 
 
-    @RequestMapping(value = "law-detail", method = {RequestMethod.GET, RequestMethod.POST})
-    public String law(@RequestParam String name, Model model) {
-        Legislation legislation = lawDetailServices.getLawDetail(name);
+    @RequestMapping(value = "law-detail", method = RequestMethod.GET)
+    public String law(@RequestParam Long id, Model model) {
+        Legislation legislation = lawDetailServices.getLawDetail(id);
         List<Legislation> listOfAmends = legislation.getListOfModification();
         Collections.sort(listOfAmends, Comparator.comparing(Legislation :: getIssueDate));
         List<Legislation> listOfRelatedLaw = legislation.getRelatedLegislation();

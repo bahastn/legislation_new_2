@@ -5,26 +5,28 @@
     <meta charset="utf-8">
     <title>Kurdistan Parliament - Iraq</title>
     <meta property="og:title" content="Kurdistan Parliament - Iraq">
-    <meta property="og:description" content="As provided in the federal constitution of Iraq, Parliament has considerable power to debate and legislate on policy in a wide range of areas: health services, education and training, policing and security, the environment, natural resources, agriculture, housing, trade, industry and investment, social services and social affairs, transport and roads, culture and tourism, sport and leisure, and ancient monuments and historic buildings., The Kurdistan Parliament shares legislative power with the federal authorities in the following areas, but priority is given to the Kurdistan Parliament’s laws: customs, electric energy and its distribution, general planning, internal water resources. In addition, under Article 121 of the Iraqi federal constitution the Kurdistan Parliament has the right to amend the application of Iraq-wide legislation that falls outside of the federal authorities’ exclusive powers.">
+    <meta property="og:description"
+          content="As provided in the federal constitution of Iraq, Parliament has considerable power to debate and legislate on policy in a wide range of areas: health services, education and training, policing and security, the environment, natural resources, agriculture, housing, trade, industry and investment, social services and social affairs, transport and roads, culture and tourism, sport and leisure, and ancient monuments and historic buildings., The Kurdistan Parliament shares legislative power with the federal authorities in the following areas, but priority is given to the Kurdistan Parliament’s laws: customs, electric energy and its distribution, general planning, internal water resources. In addition, under Article 121 of the Iraqi federal constitution the Kurdistan Parliament has the right to amend the application of Iraq-wide legislation that falls outside of the federal authorities’ exclusive powers.">
     <meta property="og:image" content="img/logo.png">
     <meta property="og:url" content="https://www.parliament.krd">
 
     <link rel="icon" href="img/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap"
+          rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <link th:href="@{/lib/animate/animate.min.css}" rel="stylesheet">
     <link th:href="@{/lib/owlcarousel/assets/owl.carousel.min.css}" rel="stylesheet">
-    <link th:href="@{/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css}" rel="stylesheet" />
+    <link th:href="@{/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css}" rel="stylesheet"/>
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
     <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
@@ -33,26 +35,60 @@
 
 <!--<div th:replace="fragments/fragment-head :: navbar"></div>-->
 <style>
-    @font-face
-    {
+    @font-face {
         font-family: UniQAIDAR_Hewal028;
         /*src: url(UniQAIDAR_Hewal028/UniQAIDAR_Hewal028.woff);*/
         src: url(UniQAIDAR_Hewal028/gov_font.woff2);
     }
 
-    * { font-family: UniQAIDAR_Hewal028; }
-    h1{font-family:'UniQAIDAR_Hewal028';}
-    h2{font-family:'UniQAIDAR_Hewal028';}
-    h3{font-family:'UniQAIDAR_Hewal028';font-weight: bold;}
-    h4{font-family:'UniQAIDAR_Hewal028';}
-    h5{font-family:'UniQAIDAR_Hewal028';}
-    h6{font-family:'UniQAIDAR_Hewal028';}
-    p{font-family:'UniQAIDAR_Hewal028';font-size:20px;}
-    ul{font-family:'UniQAIDAR_Hewal028';}
-    li{font-family:'UniQAIDAR_Hewal028';}
-    a{font-family:'UniQAIDAR_Hewal028';font-size:20px;}
-    .navbar-nav a
-    {
+    * {
+        font-family: UniQAIDAR_Hewal028;
+    }
+
+    h1 {
+        font-family: 'UniQAIDAR_Hewal028';
+    }
+
+    h2 {
+        font-family: 'UniQAIDAR_Hewal028';
+    }
+
+    h3 {
+        font-family: 'UniQAIDAR_Hewal028';
+        font-weight: bold;
+    }
+
+    h4 {
+        font-family: 'UniQAIDAR_Hewal028';
+    }
+
+    h5 {
+        font-family: 'UniQAIDAR_Hewal028';
+    }
+
+    h6 {
+        font-family: 'UniQAIDAR_Hewal028';
+    }
+
+    p {
+        font-family: 'UniQAIDAR_Hewal028';
+        font-size: 20px;
+    }
+
+    ul {
+        font-family: 'UniQAIDAR_Hewal028';
+    }
+
+    li {
+        font-family: 'UniQAIDAR_Hewal028';
+    }
+
+    a {
+        font-family: 'UniQAIDAR_Hewal028';
+        font-size: 20px;
+    }
+
+    .navbar-nav a {
         border-bottom: 2px solid #b78d65;
         margin-right: 5px;
         padding: 10px 0;
@@ -60,9 +96,9 @@
         color: black;
         font-weight: bold;
     }
-    .animate-charcter
-    {
-        text-align:center;
+
+    .animate-charcter {
+        text-align: center;
         text-transform: uppercase;
         background-image: linear-gradient(
                 -225deg,
@@ -81,44 +117,49 @@
         -webkit-text-fill-color: transparent;
         animation: textclip 2s linear infinite;
         font-size: 16px;
-        text-align:center;
+        text-align: center;
     }
 
     @keyframes textclip {
         to {
             background-position: 200% center;
-            text-align:center;
+            text-align: center;
         }
     }
 
 
-    .mb-0{
-        color:black;
+    .mb-0 {
+        color: black;
     }
 
     .pagination {
         justify-content: center;
     }
+
     .pagination a {
         color: black;
         padding: 5px 10px;
         font-size: 20px;
         border-radius: 10px;
     }
+
     .pagination a.active {
         background-color: #b78d65;
         color: white;
     }
 
-    .pagination a:hover:not(.active) {background-color: #001140; color:white;}
+    .pagination a:hover:not(.active) {
+        background-color: #001140;
+        color: white;
+    }
 
 </style>
-<!-- Spinner Start -->
-<!--<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">-->
-<!--    <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>-->
-<!--    <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-1.png" alt="Icon">-->
-<!--</div>-->
-<!-- Spinner End -->
+<!-- Spinner Start-->
+<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
+    <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-1.png" alt="Icon">
+</div>
+<!-- Spinner End-->
 
 
 <!-- Topbar Start -->
@@ -126,15 +167,23 @@
     <div class="row col-lg-12" style="color:white;width: 100%;">
         <div>
             <div class="h-100 d-inline-flex align-items-center py-3 me-3" style="color:white;">
-                <a class="px-2" href="mailto:info@legislation.krd" style="color:white;"><i class="fa fa-envelope-open text-primary me-2"></i><span class="__cf_email__" data-cfemail="cda4a3aba28dbdacbfa1a4aca0a8a3b9e3a6bfa9" style="font-size:20px;">info@legislation.krd</span></a>
+                <a class="px-2" href="mailto:info@legislation.krd" style="color:white;"><i
+                        class="fa fa-envelope-open text-primary me-2"></i><span class="__cf_email__"
+                                                                                data-cfemail="cda4a3aba28dbdacbfa1a4aca0a8a3b9e3a6bfa9"
+                                                                                style="font-size:20px;">info@legislation.krd</span></a>
             </div>
 
             <div class="h-100 d-inline-flex align-items-center py-3 me-3" style="float:right;">
-                <a class="btn btn-sm btn-outline-body me-1" href="" style="color:white;border-radius:5px;" th:href="@{/index?lang=ku}">کوردی</a>
-                <a class="btn btn-sm btn-outline-body me-1" href="" style="color:white;border-radius:5px;" th:href="@{/index?lang=ar}">العربية</a>
-                <a class="btn btn-sm-square btn-outline-body me-1" href="#" style="color:white;border-radius:5px;"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-sm-square btn-outline-body me-1" href="#" style="color:white;border-radius:5px;"><i class="fab fa-youtube"></i></a>
-                <a class="btn btn-sm-square btn-outline-body me-1" href="#" style="color:white;border-radius:5px;"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-sm btn-outline-body me-1" href="" style="color:white;border-radius:5px;"
+                   th:href="@{/index?lang=ku}">کوردی</a>
+                <a class="btn btn-sm btn-outline-body me-1" href="" style="color:white;border-radius:5px;"
+                   th:href="@{/index?lang=ar}">العربية</a>
+                <a class="btn btn-sm-square btn-outline-body me-1" href="#" style="color:white;border-radius:5px;"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-sm-square btn-outline-body me-1" href="#" style="color:white;border-radius:5px;"><i
+                        class="fab fa-youtube"></i></a>
+                <a class="btn btn-sm-square btn-outline-body me-1" href="#" style="color:white;border-radius:5px;"><i
+                        class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </div>
@@ -142,38 +191,51 @@
 <!-- Topbar End -->
 
 <!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s" dir="rtl" style="text-align:center;">
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s"
+     dir="rtl" style="text-align:center;">
 
     <img class="me-3 p-0 wow fadeInDown" src="img/3392logo1.png" style="width:7%;" alt="Icon">
 
-    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" style="font-size: 50px;">
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            style="font-size: 50px;">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-5 p-lg-0">
-            <a href="index.html" class="nav-item nav-link active wow fadeInDown" data-wow-delay="0.1s" th:href="@{/}" th:text="#{home}">سەرەکی</a>
-            <a href="about.html" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.2s" th:href="@{/about}" th:text="#{about.us}">دەربارەی بنکەی یاسادانان</a>
-            <a href="#" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.3s" th:href="@{/constitution}" th:text="#{label.const}">دەستوری هەرێم</a>
+            <a href="index.html" class="nav-item nav-link active wow fadeInDown" data-wow-delay="0.1s" th:href="@{/}"
+               th:text="#{home}">سەرەکی</a>
+            <a href="about.html" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.2s" th:href="@{/about}"
+               th:text="#{about.us}">دەربارەی بنکەی یاسادانان</a>
+            <a href="#" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.3s" th:href="@{/constitution}"
+               th:text="#{label.const}">دەستوری هەرێم</a>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle wow fadeInDown" data-bs-toggle="dropdown" data-wow-delay="0.4s" th:href="@{/krd-law}" th:text="#{kurd.law}">یاساکانی هەرێم</a>
+                <a href="#" class="nav-link dropdown-toggle wow fadeInDown" data-bs-toggle="dropdown"
+                   data-wow-delay="0.4s" th:href="@{/krd-law}" th:text="#{kurd.law}">یاساکانی هەرێم</a>
                 <div class="dropdown-menu border-0 m-0" style="text-align:center;">
                     <a href="#" class="dropdown-item">گەڕان بەپێی دەروازەی یاسا</a>
-                    <a href="#" class="dropdown-item" th:text="#{law.type.search}" th:href="@{/law-type}">گەڕان بەپێی جۆری یاسا</a>
-                    <a href="#" class="dropdown-item" th:text="#{law.year.search}" th:href="@{/list-years}">گەڕان بەپێی ساڵی دەرچوون</a>
+                    <a href="#" class="dropdown-item" th:text="#{law.type.search}" th:href="@{/law-type}">گەڕان بەپێی
+                        جۆری یاسا</a>
+                    <a href="#" class="dropdown-item" th:text="#{law.year.search}" th:href="@{/list-years}">گەڕان بەپێی
+                        ساڵی دەرچوون</a>
                 </div>
             </div>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle wow fadeInDown" data-bs-toggle="dropdown" data-wow-delay="0.5s" th:href="@{/federal-law}" th:text="#{federal.law}">یاسا ئيتحاديەكان</a>
+                <a href="#" class="nav-link dropdown-toggle wow fadeInDown" data-bs-toggle="dropdown"
+                   data-wow-delay="0.5s" th:href="@{/federal-law}" th:text="#{federal.law}">یاسا ئيتحاديەكان</a>
                 <div class="dropdown-menu border-0 m-0" style="text-align:center;">
                     <a href="https://iraqld.e-sjc-services.iq/" class="dropdown-item">یاسا ئيتحادیەکان پێش ساڵی 1992</a>
                     <a href="https://iraqld.e-sjc-services.iq/" class="dropdown-item">یاسا ئيتحادیەکان پاش ساڵی 2005</a>
                 </div>
             </div>
-            <a href="Bryara_Yasa.html" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.6s" th:href="@{/orders-law(pageNumber=${1})}" th:text="#{order.law}">بڕیارە یاسا</a>
-            <a href="#" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.7s" th:href="@{/amendments(pageNumber=${1})}" th:text="#{amends.law}">یاسا هەموارکراوە یەکخراوەکان</a>
-            <a  class="nav-item nav-link wow fadeInDown" data-wow-delay="0.8s" th:href="@{/terminated-law}" th:text="#{terminated.law}">یاسا هەڵوەشاوەکان</a>
-            <a href="contact.html" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.9s" th:href="@{/contact-us}" th:text="#{contact.us}">پەیوەندی</a>
+            <a href="Bryara_Yasa.html" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.6s"
+               th:href="@{/orders-law(pageNumber=${1})}" th:text="#{order.law}">بڕیارە یاسا</a>
+            <a href="#" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.7s"
+               th:href="@{/amendments(pageNumber=${1})}" th:text="#{amends.law}">یاسا هەموارکراوە یەکخراوەکان</a>
+            <a class="nav-item nav-link wow fadeInDown" data-wow-delay="0.8s" th:href="@{/terminated-law}"
+               th:text="#{terminated.law}">یاسا هەڵوەشاوەکان</a>
+            <a href="contact.html" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.9s"
+               th:href="@{/contact-us}" th:text="#{contact.us}">پەیوەندی</a>
         </div>
     </div>
 
@@ -186,49 +248,70 @@
     <div class="container">
         <div class="row g-5">
 
-            <div class="col-lg-12 wow fadeInDown" data-wow-delay="0.1s" style="border:2px solid #c55e00;border-radius:30px 5px;padding-bottom:15px;">
+            <div class="col-lg-12 wow fadeInDown" data-wow-delay="0.1s"
+                 style="border:2px solid #c55e00;border-radius:30px 5px;padding-bottom:15px;">
                 <br><br>
-                <h4 style="text-align:center;"  th:text="#{law.title} + ' : ' + ${law.getLawTitle()}">ناونیشانی یاسا :
-<!--                </h4>-->
-<!--                    <h4 style="text-align:center;" th:text="${law.get}">  یاسای ئەنجومەنی وەزیرانی هەرێمی کوردستان ژمارە(3)ی ساڵی (1992)</h4>-->
-<!--                <br><br>-->
-
+                <!--                <h4 style="text-align:center;"  th:text="#{law.title} + ' : ' + ${law.getLawTitle()}">ناونیشانی یاسا :-->
                 <h6>
-                    <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.3s" style="color:#b78d65;" aria-hidden="true"></i> ژمارەی یاسا: 9</b><br><br>
-                    <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.4s" style="color:#b78d65;" aria-hidden="true"></i> ساڵی دەرچوون : 1992</b><br><br>
-                    <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.5s" style="color:#b78d65;" aria-hidden="true"></i> بەرکارە</b><br><br>
+                    <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.3s" style="color:#b78d65;"
+                          aria-hidden="true"></i> ژمارەی یاسا: 9</b><br><br>
+                    <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.4s" style="color:#b78d65;"
+                          aria-hidden="true"></i> ساڵی دەرچوون : 1992</b><br><br>
+                    <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.5s" style="color:#b78d65;"
+                          aria-hidden="true"></i> بەرکارە</b><br><br>
 
                     <b>
-                        <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;" aria-hidden="true"></i> هەموارەکان : 4
+                        <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
+                           aria-hidden="true"></i> هەموارەکان : 4
                         <br><br>
                         <ul style="margin-right:2%;list-style: none;">
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (3)ی ساڵی 1996 ـ یاسای دووه‌م هه‌مواركردنی قانوونی ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ـ ژماره‌ (3)ی ساڵی 1992</a></li>
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (16)ی ساڵی 1999 یاسای سێیه‌م هه‌مواركردنی یاسای ژماره‌ (3)ی ساڵی (1992)ی هه‌مواركراوی ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستانی عێراق</a></li>
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (13)ی ساڵی (2000) یاسای چواره‌م هه‌مواركردنی یاسای ژماره‌(3)ی ساڵی(1992)ی ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستانی عێراق</a></li>
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (26)ی ساڵی 2004 یاسای پێنجه‌م هه‌موار كردنی یاسای ژماره‌ (3)ی هه‌مواركراوی ساڵی (1992)ی ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستانی عیراق</a></li>
+                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (3)ی ساڵی 1996 ـ
+                                یاسای دووه‌م هه‌مواركردنی قانوونی ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ـ ژماره‌ (3)ی
+                                ساڵی 1992</a></li>
+                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (16)ی ساڵی 1999
+                                یاسای سێیه‌م هه‌مواركردنی یاسای ژماره‌ (3)ی ساڵی (1992)ی هه‌مواركراوی ئه‌نجومه‌نی
+                                وه‌زیرانی هه‌رێمی كوردستانی عێراق</a></li>
+                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (13)ی ساڵی (2000)
+                                یاسای چواره‌م هه‌مواركردنی یاسای ژماره‌(3)ی ساڵی(1992)ی ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی
+                                كوردستانی عێراق</a></li>
+                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (26)ی ساڵی 2004
+                                یاسای پێنجه‌م هه‌موار كردنی یاسای ژماره‌ (3)ی هه‌مواركراوی ساڵی (1992)ی ئه‌نجومه‌نی
+                                وه‌زیرانی هه‌رێمی كوردستانی عیراق</a></li>
                         </ul>
                     </b>
 
                     <br><br>
 
                     <b>
-                        <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;" aria-hidden="true"></i> یاسا پەیوەستەکان : 3
+                        <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
+                           aria-hidden="true"></i> یاسا پەیوەستەکان : 3
                         <br><br>
                         <ul style="margin-right:2%;list-style: none;">
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (12)ی ساڵی 2009 هه‌مواركردنی هه‌شته‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان-عێراق ژماره‌ (3)ی ساڵی 1992ی هه‌مواركراو.</a></li>
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (13)ی ساڵی2012 یاسای هه‌مواركردنی نۆیه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ژماره‌ (3)ی ساڵی 1992ی هه‌مواركراو.</a></li>
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (8)ی ساڵی 2014 یاسای هه‌مواری ده‌یه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ـ عێراق ژماره‌ (3)ی ساڵی 1992ی هه‌مواركراو</a></li>
+                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (12)ی ساڵی 2009
+                                هه‌مواركردنی هه‌شته‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان-عێراق ژماره‌ (3)ی
+                                ساڵی 1992ی هه‌مواركراو.</a></li>
+                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (13)ی ساڵی2012
+                                یاسای هه‌مواركردنی نۆیه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ژماره‌ (3)ی ساڵی
+                                1992ی هه‌مواركراو.</a></li>
+                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (8)ی ساڵی 2014
+                                یاسای هه‌مواری ده‌یه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ـ عێراق ژماره‌ (3)ی
+                                ساڵی 1992ی هه‌مواركراو</a></li>
                         </ul>
                     </b>
 
                     <br><br>
 
                     <b>
-                        <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;" aria-hidden="true"></i> پڕۆتۆکۆلەکان : 2
+                        <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
+                           aria-hidden="true"></i> پڕۆتۆکۆلەکان : 2
                         <br><br>
                         <ul style="margin-right:2%;list-style: none;">
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (13)ی ساڵی2012 یاسای هه‌مواركردنی نۆیه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ژماره‌ (3)ی ساڵی 1992ی هه‌مواركراو.</a></li>
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (8)ی ساڵی 2014 یاسای هه‌مواری ده‌یه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ـ عێراق ژماره‌ (3)ی ساڵی 1992ی هه‌مواركراو</a></li>
+                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (13)ی ساڵی2012
+                                یاسای هه‌مواركردنی نۆیه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ژماره‌ (3)ی ساڵی
+                                1992ی هه‌مواركراو.</a></li>
+                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (8)ی ساڵی 2014
+                                یاسای هه‌مواری ده‌یه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ـ عێراق ژماره‌ (3)ی
+                                ساڵی 1992ی هه‌مواركراو</a></li>
                         </ul>
                     </b>
 
@@ -244,7 +327,7 @@
 
         <div class="row g-5">
 
-        <pre style="text-align:right;direction:rtl; font-size:14px; overflow-x: auto; white-space: pre-wrap; white-space: -moz-pre-wrap !important; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word; background: #fff; font-family:'Droid Arabic Kufi',serif; border-radius:10px; box-shadow: 5px 10px 5px #e0e0e0;" th:text="#{law.text}">
+        <pre style="text-align:right;direction:rtl; font-size:14px; overflow-x: auto; white-space: pre-wrap; white-space: -moz-pre-wrap !important; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word; background: #fff; font-family:'Droid Arabic Kufi',serif; border-radius:10px; box-shadow: 5px 10px 5px #e0e0e0;">
 
 یاسایی ئه‌نجوومه‌نی وه‌زیرانی هه‌رێمی كوردستان
 به‌ ناوی خوای به‌خشنده‌و میهره‌بان
@@ -315,7 +398,6 @@
                 </pre>
 
         </div>
-
 
 
     </div>

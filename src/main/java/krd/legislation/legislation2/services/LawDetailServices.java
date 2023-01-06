@@ -12,7 +12,7 @@ public class LawDetailServices {
         this.legislationRepository = legislationRepository;
     }
 
-    public Legislation getLawDetail(String lawTitle) {
-        return legislationRepository.findByLawTitle(lawTitle);
+    public Legislation getLawDetail(Long id) {
+        return legislationRepository.findByLawId(id);
     }
 }

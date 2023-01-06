@@ -62,12 +62,12 @@
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h4 class="mb-3" style="font-weight: bold;" th:text="#{label.const}">دەستوری هەرێم</h4>
+                    <h4 class="mb-3" style="font-weight: bold;" th:text="#{label.const}" >دەستوری هەرێم</h4>
                 </div>
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.3s">
-                <a th:href="@{/krd-law}">
+                <a th:href="@{/normal-law(pageNumber=${1})}">
                 <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
@@ -97,22 +97,22 @@
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.8s">
-                <a th:href="@{/terminated-law}">
+                <a th:href="@{/orderLegalLaws(pageNumber=${1})}">
                     <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                         <div class="fact-icon">
                             <i class="fa fa-book" style="font-size:60px;"></i>
                         </div>
-                        <h4 class="mb-3" th:text="#{order.legal.law}">پەیڕەو</h4>
+                        <h4 class="mb-3"  th:text="#{order.legal.law}">پەیڕەو</h4>
                     </div>
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.8s">
-                <a th:href="@{/terminated-law}">
+                <a th:href="@{/instructions(pageNumber=${1})}">
                     <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                         <div class="fact-icon">
                             <i class="fa fa-book" style="font-size:60px;"></i>
                         </div>
-                        <h4 class="mb-3" th:text="#{instructions}">ڕێنماییەکان</h4>
+                        <h4 class="mb-3"  th:text="#{instructions}">ڕێنماییەکان</h4>
                     </div>
                 </a>
             </div>
@@ -137,7 +137,7 @@
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.8s">
-                <a th:href="@{/terminated-law}">
+                <a href="#">
                 <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>

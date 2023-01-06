@@ -155,10 +155,10 @@
 
 </style>
 <!-- Spinner Start-->
-<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-    <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-1.png" alt="Icon">
-</div>
+<!--<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">-->
+<!--    <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>-->
+<!--    <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-1.png" alt="Icon">-->
+<!--</div>-->
 <!-- Spinner End-->
 
 
@@ -241,7 +241,6 @@
 
 </nav>
 <!-- Navbar End -->
-</div>
 
 
 <div class="container-xxl py-5" dir="rtl">
@@ -251,69 +250,96 @@
             <div class="col-lg-12 wow fadeInDown" data-wow-delay="0.1s"
                  style="border:2px solid #c55e00;border-radius:30px 5px;padding-bottom:15px;">
                 <br><br>
-                <!--                <h4 style="text-align:center;"  th:text="#{law.title} + ' : ' + ${law.getLawTitle()}">ناونیشانی یاسا :-->
-                <h6>
-                    <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.3s" style="color:#b78d65;"
-                          aria-hidden="true"></i> ژمارەی یاسا: 9</b><br><br>
-                    <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.4s" style="color:#b78d65;"
-                          aria-hidden="true"></i> ساڵی دەرچوون : 1992</b><br><br>
+                <div th:switch="${law.getLawCategory()}">
+                    <h4 th:case="'2'" style="text-align:center; font-family: Calibri "
+                        th:text="#{law.title} + ' : ' + ${law.getLawTitle()}">ناونیشانی یاسا</h4>
+                    <h4 th:case="'3'" style="text-align:center; font-family: Calibri "
+                        th:text="#{order.title} + ' : ' + ${law.getLawTitle()}">ناونیشانی یاسا</h4>
+                    <h4 th:case="'4'" style="text-align:center; font-family: Calibri "
+                        th:text="#{law.title} + ' : ' + ${law.getLawTitle()}">ناونیشانی یاسا</h4>
+                    <h4 th:case="'5'" style="text-align:center; font-family: Calibri "
+                        th:text="#{law.title} + ' : ' + ${law.getLawTitle()}">ناونیشانی یاسا</h4>
+                    <h4 th:case="'6'" style="text-align:center; font-family: Calibri "
+                        th:text="#{law.title} + ' : ' + ${law.getLawTitle()}">ناونیشانی یاسا</h4>
+
+                </div>
+                <div th:switch="${law.getLawCategory()}">
+                    <b>
+                        <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.3s" style="color:#b78d65;"
+                           aria-hidden="true">
+                            <h5 th:case="'2'" th:text="#{law.number} + ' : ' + ${law.getLawNumber()}"></h5>
+                            <h5 th:case="'3'" th:text="#{order.number} + ' : ' + ${law.getLawNumber()}"></h5>
+                            <h5 th:case="'4'" th:text="#{act.number} + ' : ' + ${law.getLawNumber()}"></h5>
+                            <h5 th:case="'5'" th:text="#{order.management.number} + ' : ' + ${law.getLawNumber()}"></h5>
+                            <h5 th:case="'6'" th:text="#{regualtion.number} + ' : ' + ${law.getLawNumber()}"></h5>
+                        </i> </b><br><br>
+                </div>
+                <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.4s" style="color:#b78d65;"
+                      aria-hidden="true"></i>
+                    <h5 th:text="#{law.issue.year} + ' : ' + ${law.getIssueDate()}"></h5>
+                </b><br><br>
+                <div th:switch="${law.getActive()}">
                     <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.5s" style="color:#b78d65;"
-                          aria-hidden="true"></i> بەرکارە</b><br><br>
+                          aria-hidden="true"></i>
+                        <h5 class="h6 fields" th:case="'1'" th:text="#{active.law.text}"></h5>
+                        <h5 class="h6 fields" th:case="'0'" th:text="#{terminated.law.text}"></h5>
+                    </b><br><br>
+                </div>
 
-                    <b>
-                        <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
-                           aria-hidden="true"></i> هەموارەکان : 4
-                        <br><br>
-                        <ul style="margin-right:2%;list-style: none;">
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (3)ی ساڵی 1996 ـ
-                                یاسای دووه‌م هه‌مواركردنی قانوونی ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ـ ژماره‌ (3)ی
-                                ساڵی 1992</a></li>
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (16)ی ساڵی 1999
-                                یاسای سێیه‌م هه‌مواركردنی یاسای ژماره‌ (3)ی ساڵی (1992)ی هه‌مواركراوی ئه‌نجومه‌نی
-                                وه‌زیرانی هه‌رێمی كوردستانی عێراق</a></li>
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (13)ی ساڵی (2000)
-                                یاسای چواره‌م هه‌مواركردنی یاسای ژماره‌(3)ی ساڵی(1992)ی ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی
-                                كوردستانی عێراق</a></li>
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (26)ی ساڵی 2004
-                                یاسای پێنجه‌م هه‌موار كردنی یاسای ژماره‌ (3)ی هه‌مواركراوی ساڵی (1992)ی ئه‌نجومه‌نی
-                                وه‌زیرانی هه‌رێمی كوردستانی عیراق</a></li>
-                        </ul>
-                    </b>
+                <div>
+
+
+                    <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
+                       aria-hidden="true"></i>
+                    <h4 th:text="#{law.edit.list} + ' : ' + ${listOfAmends.size()} "></h4>
+                    <br><br>
+                    <ul style="margin-right:2%;list-style: none;" th:each="laws : ${listOfAmends}">
+                        <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#"
+                                                                             th:href="@{/law-detail/(id=${laws.getLawId()})}"
+                                                                             th:text=" '  '+ ${laws.getLawTitle()}  ">
+                            یاسای دووه‌م هه‌مواركردنی قانوونی ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ـ ژماره‌ ساڵی
+                            1992</a></li>
+                    </ul>
 
                     <br><br>
-
-                    <b>
-                        <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
-                           aria-hidden="true"></i> یاسا پەیوەستەکان : 3
-                        <br><br>
-                        <ul style="margin-right:2%;list-style: none;">
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (12)ی ساڵی 2009
-                                هه‌مواركردنی هه‌شته‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان-عێراق ژماره‌ (3)ی
-                                ساڵی 1992ی هه‌مواركراو.</a></li>
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (13)ی ساڵی2012
-                                یاسای هه‌مواركردنی نۆیه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ژماره‌ (3)ی ساڵی
-                                1992ی هه‌مواركراو.</a></li>
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (8)ی ساڵی 2014
-                                یاسای هه‌مواری ده‌یه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ـ عێراق ژماره‌ (3)ی
-                                ساڵی 1992ی هه‌مواركراو</a></li>
-                        </ul>
-                    </b>
-
+                </div>
+                <b>
+                    <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
+                       aria-hidden="true"></i>
+                    <h5 th:text="#{law.related.list} +' : ' + ${listOfRelatedLaw.size()} "></h5>
                     <br><br>
+                    <ul style="margin-right:2%;list-style: none;" th:each="lawRe : ${listOfRelatedLaw}">
+                        <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#"
+                                                                             th:href="@{/law-detail/(id=${lawRe.getLawId()})}"
+                                                                             th:text="${lawRe.getLawTitle()}">یاسای
+                            ژماره‌ (12)ی ساڵی
+                            2009
+                            هه‌مواركردنی هه‌شته‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان-عێراق ژماره‌
+                            (3)ی
+                            ساڵی 1992ی هه‌مواركراو.</a></li>
 
-                    <b>
-                        <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
-                           aria-hidden="true"></i> پڕۆتۆکۆلەکان : 2
-                        <br><br>
-                        <ul style="margin-right:2%;list-style: none;">
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (13)ی ساڵی2012
-                                یاسای هه‌مواركردنی نۆیه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ژماره‌ (3)ی ساڵی
-                                1992ی هه‌مواركراو.</a></li>
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (8)ی ساڵی 2014
-                                یاسای هه‌مواری ده‌یه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ـ عێراق ژماره‌ (3)ی
-                                ساڵی 1992ی هه‌مواركراو</a></li>
-                        </ul>
-                    </b>
+                    </ul>
+                </b>
+
+                <br><br>
+
+                <b>
+                    <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
+                       aria-hidden="true"></i>
+                    <h4 th:text="#{law.protocal.list} "></h4>
+                    <br><br>
+                    <ul style="margin-right:2%;list-style: none;" th:if="${law.getProtocols() != null}">
+                        <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#"
+                                                                             th:href="@{/download-protocol/(id=${law.getLawId() })}"
+                                                                             th:text="${law.getProtocols().getProtocolTitle()}">یاسای
+                            ژماره‌ (13)ی
+                            ساڵی2012
+                            یاسای هه‌مواركردنی نۆیه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ژماره‌ (3)ی
+                            ساڵی
+                            1992ی هه‌مواركراو.</a></li>
+
+                    </ul>
+                </b>
 
                 </h6>
 
@@ -326,8 +352,20 @@
         <br>
 
         <div class="row g-5">
-
-        <pre style="text-align:right;direction:rtl; font-size:14px; overflow-x: auto; white-space: pre-wrap; white-space: -moz-pre-wrap !important; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word; background: #fff; font-family:'Droid Arabic Kufi',serif; border-radius:10px; box-shadow: 5px 10px 5px #e0e0e0;">
+            <h4 th:text="#{law.text}">دەقی یاسا</h4>
+            <div>
+                <button class="btn btn-primary"
+                        th:onclick="|window.location.href='@{/download/(id=${law.getPdfDocument().getDocumentId()})}'|"
+                        th:text="#{law.download.pdf}">
+                </button>
+                <button class="btn btn-primary"
+                        th:onclick="|window.location.href='@{/download-word/(id=${law.getWordDocument().getDocumentId()})}'|"
+                        th:text="#{law.download.word}">
+                </button>
+            </div>
+<!--            <p  th:text="${law.getLawContent()}"></p>-->
+           <pre th:utext="${#strings.escapeXml(#strings.listJoin(law.getLawContent(),'&lt;br&gt;'))}"
+                 style="text-align:right;direction:rtl; font-size:14px; overflow-x: auto; white-space: pre-wrap; white-space: -moz-pre-wrap !important; white-space: pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word; background: #fff; font-family:'Droid Arabic Kufi',serif; border-radius:10px; box-shadow: 5px 10px 5px #e0e0e0;">
 
 یاسایی ئه‌نجوومه‌نی وه‌زیرانی هه‌رێمی كوردستان
 به‌ ناوی خوای به‌خشنده‌و میهره‌بان
@@ -402,31 +440,31 @@
 
     </div>
 </div>
-<!-- About End -->
+    <!-- About End -->
 
-<!-- Footer Start -->
-<footer th:replace="fragments/fragment-footer :: footer"></footer>
-<!-- Footer End -->
-
-
-<!-- Back to Top -->
-<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- Footer Start -->
+    <footer th:replace="fragments/fragment-footer :: footer"></footer>
+    <!-- Footer End -->
 
 
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="lib/tempusdominus/js/moment.min.js"></script>
-<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-<!-- Template Javascript -->
-<script src="js/main.js"></script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

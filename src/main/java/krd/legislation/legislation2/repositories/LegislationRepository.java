@@ -32,15 +32,14 @@ public interface LegislationRepository extends JpaRepository<Legislation, Long> 
     Legislation findByLawTitle(String lawTitle);
 //
 //
-////    @Query("SELECT l.issueDate FROM Legislation l WHERE l.approved = 1 AND l.classification = ?1 GROUP BY  l.issueDate order by l.issueDate DESC ")
-////    List<Integer> findByYear(String classification);
+    @Query("SELECT l.issueDate FROM Legislation l WHERE l.approved = 1 AND  l.lawCategory = ?1 GROUP BY  l.issueDate order by l.issueDate DESC ")
+    List<Integer> findByYear(String lawCategory);
 //
 //
-//    @Query("SELECT l FROM Legislation l where l.approved = 1  AND l.lawCategory ='2' AND  l.classification = ?1 and l.issueDate=?2 and l.language = ?3 order by l.issueDate DESC ")
-//    List<Legislation> findBySelectedYearLaws(String classification, Integer year, String language);
-//
-//    @Query("SELECT l FROM Legislation l where l.approved = 1  AND l.lawCategory ='3' AND  l.classification = ?1 and l.issueDate=?2 and l.language = ?3 order by l.issueDate DESC ")
-//    List<Legislation> findBySelectedYearOrders(String classification, Integer year, String language);
+    @Query("SELECT l FROM Legislation l where l.approved = 1  AND l.lawCategory ='2' AND  l.classification = ?1 and l.issueDate=?2 and l.language = ?3 order by l.issueDate DESC ")
+    List<Legislation> findBySelectedYearLaws(String classification, Integer year, String language);
+    @Query("SELECT l FROM Legislation l where l.approved = 1  AND l.lawCategory ='3' AND  l.classification = ?1 and l.issueDate=?2 and l.language = ?3 order by l.issueDate DESC ")
+    List<Legislation> findBySelectedYearOrders(String classification, Integer year, String language);
 //
 //    @Query("SELECT l FROM Legislation l where l.approved = 1 AND  l.classification = ?1 and l.language = ?2 and  l.issueDate between ?3 and ?4 ")
 //    List<Legislation> findFederalLawBySelectedYear(String classification, String language, Integer yearStart, Integer yearEnd);

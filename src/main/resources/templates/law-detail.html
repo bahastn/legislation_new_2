@@ -21,13 +21,14 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet"/>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
 
 </head>
 
 <body>
-<div th:replace="fragments/fragment-head :: navbar"></div>
+
+<div th:replace="fragments/fragment-head2 :: navbar"></div>
 
 <div class="container-xxl py-5" dir="rtl">
     <div class="container">
@@ -35,7 +36,7 @@
 
             <div class="col-lg-12 wow fadeInDown" data-wow-delay="0.1s"
                  style="border:2px solid #c55e00;border-radius:30px 5px;padding-bottom:15px;">
-                <br><br>
+                <br>
                 <div th:switch="${law.getLawCategory()}">
                     <h4 th:case="'2'"
                         th:text="#{law.title} + ' : ' + ${law.getLawTitle()}">ناونیشانی یاسا</h4>
@@ -49,7 +50,7 @@
                         th:text="#{law.title} + ' : ' + ${law.getLawTitle()}">ناونیشانی یاسا</h4>
                 </div>
                 <div th:switch="${law.getLawCategory()}">
-                    <b>
+
                         <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.3s" style="color:#b78d65;"
                            aria-hidden="true">
                             <h5 th:case="'2'" th:text="#{law.number} + ' : ' + ${law.getLawNumber()}"></h5>
@@ -59,16 +60,17 @@
                             <h5 th:case="'6'" th:text="#{regualtion.number} + ' : ' + ${law.getLawNumber()}"></h5>
                         </i> </b><br><br>
                 </div>
-                <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.4s" style="color:#b78d65;"
+
+                    <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.4s" style="color:#b78d65;"
                       aria-hidden="true"></i>
                     <h5 th:text="#{law.issue.year} + ' : ' + ${law.getIssueDate()}"></h5>
-                </b><br><br>
+
                 <div th:switch="${law.getActive()}">
                     <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.5s" style="color:#b78d65;"
                           aria-hidden="true"></i>
                         <h5 class="h6 fields" th:case="'1'" th:text="#{active.law.text}"></h5>
                         <h5 class="h6 fields" th:case="'0'" th:text="#{terminated.law.text}"></h5>
-                    </b><br><br>
+
                 </div>
 
                 <div>
@@ -86,13 +88,12 @@
                             1992</a></li>
                     </ul>
 
-                    <br><br>
                 </div>
-                <b>
+
                     <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
                        aria-hidden="true"></i>
                     <h5 th:text="#{law.related.list} +' : ' + ${listOfRelatedLaw.size()} "></h5>
-                    <br><br>
+
                     <ul style="margin-right:2%;list-style: none;" th:each="lawRe : ${listOfRelatedLaw}">
                         <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#"
                                                             th:href="@{/law-detail/(id=${lawRe.getLawId()})}"
@@ -104,15 +105,15 @@
                             ساڵی 1992ی هه‌مواركراو.</a></li>
 
                     </ul>
-                </b>
 
-                <br><br>
 
-                <b>
+
+
+
                     <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
                        aria-hidden="true"></i>
                     <h4 th:text="#{law.protocal.list} "></h4>
-                    <br><br>
+
                     <ul style="margin-right:2%;list-style: none;" th:if="${law.getProtocols() != null}">
                         <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#"
                                                                              th:href="@{/download-protocol/(id=${law.getLawId() })}"
@@ -124,7 +125,7 @@
                             1992ی هه‌مواركراو.</a></li>
 
                     </ul>
-                </b>
+
 
                 </h6>
 
@@ -133,8 +134,7 @@
         </div>
 
         <br>
-        <br>
-        <br>
+
 
         <div class="row g-5">
             <h4 th:text="#{law.text}">دەقی یاسا</h4>

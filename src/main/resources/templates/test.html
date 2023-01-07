@@ -1,156 +1,106 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
     <title>Kurdistan Parliament - Iraq</title>
-    <meta property="og:title" content="Kurdistan Parliament - Iraq">
-    <meta property="og:description"
-          content="As provided in the federal constitution of Iraq, Parliament has considerable power to debate and legislate on policy in a wide range of areas: health services, education and training, policing and security, the environment, natural resources, agriculture, housing, trade, industry and investment, social services and social affairs, transport and roads, culture and tourism, sport and leisure, and ancient monuments and historic buildings., The Kurdistan Parliament shares legislative power with the federal authorities in the following areas, but priority is given to the Kurdistan Parliament’s laws: customs, electric energy and its distribution, general planning, internal water resources. In addition, under Article 121 of the Iraqi federal constitution the Kurdistan Parliament has the right to amend the application of Iraq-wide legislation that falls outside of the federal authorities’ exclusive powers.">
-    <meta property="og:image" content="img/logo.png">
-    <meta property="og:url" content="https://www.parliament.krd">
+	<meta property="og:title" content="Kurdistan Parliament - Iraq">
+	<meta property="og:description" content="As provided in the federal constitution of Iraq, Parliament has considerable power to debate and legislate on policy in a wide range of areas: health services, education and training, policing and security, the environment, natural resources, agriculture, housing, trade, industry and investment, social services and social affairs, transport and roads, culture and tourism, sport and leisure, and ancient monuments and historic buildings., The Kurdistan Parliament shares legislative power with the federal authorities in the following areas, but priority is given to the Kurdistan Parliament’s laws: customs, electric energy and its distribution, general planning, internal water resources. In addition, under Article 121 of the Iraqi federal constitution the Kurdistan Parliament has the right to amend the application of Iraq-wide legislation that falls outside of the federal authorities’ exclusive powers.">
+	<meta property="og:image" content="img/logo.png">
+	<meta property="og:url" content="https://www.parliament.krd">
 
     <link rel="icon" href="img/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet"/>
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    
 
 </head>
 
 <body>
-<div th:replace="fragments/fragment-head :: navbar"></div>
+    <div th:replace="fragments/fragment-head :: navbar"></div>
+    <!-- Navbar End -->
 
-<div class="container-xxl py-5" dir="rtl">
-    <div class="container">
-        <div class="row g-5">
+    <!-- About Start -->
+    <div class="container-xxl py-5" dir="rtl">
+        <div class="container">
+            <div class="row g-5">
 
-            <div class="col-lg-12 wow fadeInDown" data-wow-delay="0.1s"
-                 style="border:2px solid #c55e00;border-radius:30px 5px;padding-bottom:15px;">
-                <br><br>
-                <div th:switch="${law.getLawCategory()}">
-                    <h4 th:case="'2'"
-                        th:text="#{law.title} + ' : ' + ${law.getLawTitle()}">ناونیشانی یاسا</h4>
-                    <h4 th:case="'3'"
-                        th:text="#{order.title} + ' : ' + ${law.getLawTitle()}">ناونیشانی یاسا</h4>
-                    <h4 th:case="'4'"
-                        th:text="#{law.title} + ' : ' + ${law.getLawTitle()}">ناونیشانی یاسا</h4>
-                    <h4 th:case="'5'"
-                        th:text="#{law.title} + ' : ' + ${law.getLawTitle()}">ناونیشانی یاسا</h4>
-                    <h4 th:case="'6'"
-                        th:text="#{law.title} + ' : ' + ${law.getLawTitle()}">ناونیشانی یاسا</h4>
+                <div class="col-lg-12 wow fadeInDown" data-wow-delay="0.1s" style="border:2px solid #c55e00;border-radius:30px 5px;padding-bottom:15px;">
+				<br><br>
+					<h4 style="text-align:center;">ناونیشانی یاسا : یاسای ئەنجومەنی وەزیرانی هەرێمی کوردستان ژمارە(3)ی ساڵی (1992)</h4>
+					<br><br>
+					
+					<h6>
+					    <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.3s" style="color:#b78d65;" aria-hidden="true"></i> ژمارەی یاسا: 9</b><br><br>
+					    <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.4s" style="color:#b78d65;" aria-hidden="true"></i> ساڵی دەرچوون : 1992</b><br><br>
+					    <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.5s" style="color:#b78d65;" aria-hidden="true"></i> بەرکارە</b><br><br>
+					    
+					    <b>
+					        <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;" aria-hidden="true"></i> هەموارەکان : 4
+					        <br><br>
+					        <ul style="margin-right:2%;list-style: none;">
+					            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (3)ی ساڵی 1996 ـ یاسای دووه‌م هه‌مواركردنی قانوونی ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ـ ژماره‌ (3)ی ساڵی 1992</a></li>
+					            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (16)ی ساڵی 1999 یاسای سێیه‌م هه‌مواركردنی یاسای ژماره‌ (3)ی ساڵی (1992)ی هه‌مواركراوی ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستانی عێراق</a></li>
+					            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (13)ی ساڵی (2000) یاسای چواره‌م هه‌مواركردنی یاسای ژماره‌(3)ی ساڵی(1992)ی ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستانی عێراق</a></li>
+					            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (26)ی ساڵی 2004 یاسای پێنجه‌م هه‌موار كردنی یاسای ژماره‌ (3)ی هه‌مواركراوی ساڵی (1992)ی ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستانی عیراق</a></li>
+					        </ul>
+					    </b>
+					    
+					    <br><br>
+					    
+					    <b>
+					        <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;" aria-hidden="true"></i> یاسا پەیوەستەکان : 3
+					        <br><br>
+					        <ul style="margin-right:2%;list-style: none;">
+					            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (12)ی ساڵی 2009 هه‌مواركردنی هه‌شته‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان-عێراق ژماره‌ (3)ی ساڵی 1992ی هه‌مواركراو.</a></li>
+					            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (13)ی ساڵی2012 یاسای هه‌مواركردنی نۆیه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ژماره‌ (3)ی ساڵی 1992ی هه‌مواركراو.</a></li>
+					            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (8)ی ساڵی 2014 یاسای هه‌مواری ده‌یه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ـ عێراق ژماره‌ (3)ی ساڵی 1992ی هه‌مواركراو</a></li>
+					        </ul>
+					    </b>
+					    
+					    <br><br>
+					    
+					    <b>
+					        <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;" aria-hidden="true"></i> پڕۆتۆکۆلەکان : 2
+					        <br><br>
+					        <ul style="margin-right:2%;list-style: none;">
+					            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (13)ی ساڵی2012 یاسای هه‌مواركردنی نۆیه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ژماره‌ (3)ی ساڵی 1992ی هه‌مواركراو.</a></li>
+					            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#">یاسای ژماره‌ (8)ی ساڵی 2014 یاسای هه‌مواری ده‌یه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ـ عێراق ژماره‌ (3)ی ساڵی 1992ی هه‌مواركراو</a></li>
+					        </ul>
+					    </b>
+					    
+					</h6>
+    
                 </div>
-                <div th:switch="${law.getLawCategory()}">
-                    <b>
-                        <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.3s" style="color:#b78d65;"
-                           aria-hidden="true">
-                            <h5 th:case="'2'" th:text="#{law.number} + ' : ' + ${law.getLawNumber()}"></h5>
-                            <h5 th:case="'3'" th:text="#{order.number} + ' : ' + ${law.getLawNumber()}"></h5>
-                            <h5 th:case="'4'" th:text="#{act.number} + ' : ' + ${law.getLawNumber()}"></h5>
-                            <h5 th:case="'5'" th:text="#{order.management.number} + ' : ' + ${law.getLawNumber()}"></h5>
-                            <h5 th:case="'6'" th:text="#{regualtion.number} + ' : ' + ${law.getLawNumber()}"></h5>
-                        </i> </b><br><br>
-                </div>
-                <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.4s" style="color:#b78d65;"
-                      aria-hidden="true"></i>
-                    <h5 th:text="#{law.issue.year} + ' : ' + ${law.getIssueDate()}"></h5>
-                </b><br><br>
-                <div th:switch="${law.getActive()}">
-                    <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.5s" style="color:#b78d65;"
-                          aria-hidden="true"></i>
-                        <h5 class="h6 fields" th:case="'1'" th:text="#{active.law.text}"></h5>
-                        <h5 class="h6 fields" th:case="'0'" th:text="#{terminated.law.text}"></h5>
-                    </b><br><br>
-                </div>
-
-                <div>
-
-
-                    <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
-                       aria-hidden="true"></i>
-                    <h4 th:text="#{law.edit.list} + ' : ' + ${listOfAmends.size()} "></h4>
-                    <br><br>
-                    <ul style="margin-right:2%;list-style: none;" th:each="laws : ${listOfAmends}">
-                        <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#"
-                                                                             th:href="@{/law-detail/(id=${laws.getLawId()})}"
-                                                                             th:text=" '  '+ ${laws.getLawTitle()}  ">
-                            یاسای دووه‌م هه‌مواركردنی قانوونی ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ـ ژماره‌ ساڵی
-                            1992</a></li>
-                    </ul>
-
-                    <br><br>
-                </div>
-                <b>
-                    <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
-                       aria-hidden="true"></i>
-                    <h5 th:text="#{law.related.list} +' : ' + ${listOfRelatedLaw.size()} "></h5>
-                    <br><br>
-                    <ul style="margin-right:2%;list-style: none;" th:each="lawRe : ${listOfRelatedLaw}">
-                        <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#"
-                                                            th:href="@{/law-detail/(id=${lawRe.getLawId()})}"
-                                                                th:text="${lawRe.getLawTitle()}">یاسای
-                            ژماره‌ (12)ی ساڵی
-                            2009
-                            هه‌مواركردنی هه‌شته‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان-عێراق ژماره‌
-                            (3)ی
-                            ساڵی 1992ی هه‌مواركراو.</a></li>
-
-                    </ul>
-                </b>
-
-                <br><br>
-
-                <b>
-                    <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
-                       aria-hidden="true"></i>
-                    <h4 th:text="#{law.protocal.list} "></h4>
-                    <br><br>
-                    <ul style="margin-right:2%;list-style: none;" th:if="${law.getProtocols() != null}">
-                        <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#"
-                                                                             th:href="@{/download-protocol/(id=${law.getLawId() })}"
-                                                                             th:text="${law.getProtocols().getProtocolTitle()}">یاسای
-                            ژماره‌ (13)ی
-                            ساڵی2012
-                            یاسای هه‌مواركردنی نۆیه‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ژماره‌ (3)ی
-                            ساڵی
-                            1992ی هه‌مواركراو.</a></li>
-
-                    </ul>
-                </b>
-
-                </h6>
-
-            </div>
-
-        </div>
-
-        <br>
-        <br>
-        <br>
-
-        <div class="row g-5">
-            <h4 th:text="#{law.text}">دەقی یاسا</h4>
-            <div>
-                <button class="btn btn-primary"
-                        th:onclick="|window.location.href='@{/download/(id=${law.getPdfDocument().getDocumentId()})}'|"
-                        th:text="#{law.download.pdf}">
-                </button>
-                <button class="btn btn-primary"
-                        th:onclick="|window.location.href='@{/download-word/(id=${law.getWordDocument().getDocumentId()})}'|"
-                        th:text="#{law.download.word}">
-                </button>
-            </div>
-            <pre th:text="${law.getLawContent()}"
-                 style="text-align:right;direction:rtl; font-size:14px; overflow-x: auto; white-space: pre-wrap; white-space: -moz-pre-wrap !important; white-space: pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word; background: #fff; font-family:'Droid Arabic Kufi',serif; border-radius:10px; box-shadow: 5px 10px 5px #e0e0e0;">
-
+				
+			</div>
+			
+			<br>
+			<br>
+			<br>
+			
+			<div class="row g-5">
+			    <pre style="text-align:right;direction:rtl;
+			    font-size:14px;
+			    overflow-x: auto;
+        		white-space: pre-wrap;
+        		white-space: -moz-pre-wrap !important;
+        		white-space: -pre-wrap;
+        		white-space: -o-pre-wrap;
+        		word-wrap: break-word;
+        		background: #fff;
+        		font-family:'Droid Arabic Kufi',serif;
+        		border-radius:10px;
+        		box-shadow: 5px 10px 5px #e0e0e0;">
+			        
 یاسایی ئه‌نجوومه‌نی وه‌زیرانی هه‌رێمی كوردستان
 به‌ ناوی خوای به‌خشنده‌و میهره‌بان
 به‌ ناوی گه‌ل
@@ -216,38 +166,60 @@
                                                                                    جوهر نامق سالم
                                                                 سه‌رۆكی ئه‌نجوومه‌نیی نیشتمانی کوردستانی عێراق
 
-
+			        
                 </pre>
-
+			</div>
+			
+			
+			
         </div>
-
-
     </div>
-</div>
-<!-- About End -->
+    <!-- About End -->
 
-<!-- Footer Start -->
-<footer th:replace="fragments/fragment-footer :: footer"></footer>
-<!-- Footer End -->
+        
+
+    <!-- Footer Start -->
+    <nav class="navbar navbar-expand-lg" data-wow-delay="0.1s" style="background:#001140;width: 100%;" dir="rtl">
+       <div class="row col-lg-12" style="color:white;width: 100%;">
+            
+            
+            <div class="col-md-12 text-center">
+                
+                <div style="float:right;margin-right:10%;">
+                    <p class="mb-2"><i class="fa fa-map-marker-alt" style="color:red;"></i> هەولێر، شەقامی ٦٠م، پەرلەمانی کوردستان، عراق</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt" style="color:red;"></i> Erbil, 60S, Avenue, Kurdistan parliament, Iraq</p>
+                </div>
+                
+                <div style="float:left;margin-left:10%;">
+                    <p class="mb-2">بەستەرە پەیوەندارەکان</p>
+                    <a style="padding-left:10px;color:white;" href="https://gov.krd/moj/publications/%D9%88%DB%95%D9%82%D8%A7%D8%A6%D8%B9%DB%8C-%DA%A9%D9%88%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86/">وەقایعی کوردستان</a>
+                    <a style="padding-left:10px;color:white;" href="http://www.iraqld.hjc.iq/">بنکەی یاسادانانی عێراقی</a>
+                    <a style="color:white;" href="https://www.parliament.krd/">پەرلەمانی کوردستان</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Footer End -->
 
 
-<!-- Back to Top -->
-<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="lib/tempusdominus/js/moment.min.js"></script>
-<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-<!-- Template Javascript -->
-<script src="js/main.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -45,57 +45,98 @@
     <div class="row col-lg-3"></div>
     <div class="row col-lg-6">
         <img src="img/draw3.png" style="text-align:center;margin:auto;width:50%;">
+        <hr>
     </div>
 </div>
+
+<br>
 
 <!-- Facts Start -->
 <div class="container-xxl py-5" dir="rtl">
     <div class="container pt-5">
         <div class="row g-4">
 
-            <div class="col-lg-6 col-md-6 wow fadeInDown" data-wow-delay="0.3s">
-                <a th:href="@{Kurdistan_Law}">
+            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.2s">
+                <a th:href="@{/constitution}">
                 <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h3 class="mb-3" th:text="#{kurd.law}">یاساکانی هەرێم</h3>
+                    <h4 class="mb-3" style="font-weight: bold;" th:text="#{label.const}" >دەستوری هەرێم</h4>
                 </div>
                 </a>
             </div>
-            <div class="col-lg-6 col-md-6 wow fadeInDown" data-wow-delay="0.4s">
-                <a href="https://iraqld.e-sjc-services.iq/" target="_blank">
+            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.3s">
+                <a th:href="@{/normal-law(pageNumber=${1})}">
                 <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                     <div class="fact-icon">
                         <i class="fa fa-book" style="font-size:60px;"></i>
                     </div>
-                    <h3 class="mb-3" th:text="#{federal.law}">یاسا ئيتحاديەكان</h3>
+                    <h4 class="mb-3" th:text="#{kurd.law}">یاساکانی هەرێم</h4>
+                </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.5s">
+                <a th:href="@{/orders-law(pageNumber=${1})}">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <div class="fact-icon">
+                        <i class="fa fa-book" style="font-size:60px;"></i>
+                    </div>
+                    <h4 class="mb-3" th:text="#{order.law}">بڕیارە یاسا</h4>
+                </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.8s">
+                <a th:href="@{/orderLegalLaws(pageNumber=${1})}">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <i class="fa fa-book" style="font-size:60px;"></i>
+                        </div>
+                        <h4 class="mb-3"  th:text="#{order.legal.law}">پەیڕەو</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.8s">
+                <a th:href="@{/instructions(pageNumber=${1})}">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <i class="fa fa-book" style="font-size:60px;"></i>
+                        </div>
+                        <h4 class="mb-3"  th:text="#{instructions}">ڕێنماییەکان</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.6s">
+                <a th:href="@{/amendments(pageNumber=${1})}">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <div class="fact-icon">
+                        <i class="fa fa-book" style="font-size:60px;"></i>
+                    </div>
+                    <h4 class="mb-3" th:text="#{amends.law}">یاسا هەموارکراوە یەکخراوەکان</h4>
+                </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.7s">
+                <a th:href="@{/terminated-law}">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <div class="fact-icon">
+                        <i class="fa fa-book" style="font-size:60px;"></i>
+                    </div>
+                    <h4 class="mb-3" th:text="#{terminated.law}">یاسا هەڵوەشاوەکان</h4>
+                </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInDown" data-wow-delay="0.8s">
+                <a href="#">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <div class="fact-icon">
+                        <i class="fa fa-book" style="font-size:60px;"></i>
+                    </div>
+                    <h4 class="mb-3" th:text="#{law.protocal.list}">پڕۆتۆکۆل</h4>
                 </div>
                 </a>
             </div>
 
-            <div class="col-lg-1 col-md-6"></div>
-                <div class="col-lg-2 col-md-6 wow fadeInDown" data-wow-delay="0.3s" style="text-align: center;">
-                    <h3 class="mb-0" th:text="#{simple.law}">یاسا</h3>
-                    <h1 class="display-2 mb-n2" data-toggle="counter-up" th:text="${law}" style="border:2px solid #b78d65;">100</h1>
-                </div>
-                <div class="col-lg-2 col-md-6 wow fadeInDown" data-wow-delay="0.3s" style="text-align: center;">
-                    <h3 class="mb-0" th:text="#{order.law}">بڕیارەکان</h3>
-                    <h1 class="display-2 mb-n2" data-toggle="counter-up" th:text="${order}" style="border:2px solid #b78d65;">200</h1>
-                </div>
-                <div class="col-lg-2 col-md-6 wow fadeInDown" data-wow-delay="0.3s" style="text-align: center;">
-                    <h3 class="mb-0" th:text="#{instructions}">ڕێنماییەکان</h3>
-                    <h1 class="display-2 mb-n2" data-toggle="counter-up" th:text="${management}" style="border:2px solid #b78d65;">300</h1>
-                </div>
-                <div class="col-lg-2 col-md-6 wow fadeInDown" data-wow-delay="0.3s" style="text-align: center;">
-                    <h3 class="mb-0" th:text="#{order.legal.law}">پەیڕەوەکان</h3>
-                    <h1 class="display-2 mb-n2" data-toggle="counter-up" th:text="${guide}" style="border:2px solid #b78d65;">400</h1>
-                </div>
-                <div class="col-lg-2 col-md-6 wow fadeInDown" data-wow-delay="0.3s" style="text-align: center;">
-                    <h3 class="mb-0" th:text="#{order.managment}">بڕیارەکانی کارگێری</h3>
-                    <h1 class="display-2 mb-n2" data-toggle="counter-up" th:text="${managementOrder}" style="border:2px solid #b78d65;">500</h1>
-                </div>
-            <div class="col-lg-1 col-md-6"></div>
 
         </div>
     </div>

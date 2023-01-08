@@ -39,53 +39,40 @@
 
 
 <!-- Facts End -->
-<div class="container-xxl py-5" dir="rtl">
+<div class="container-xxl py-5" >
     <div class="container pt-5">
-        <div class="row g-4">
+        <div style="width:100%;">
 
-            <div class="col-lg-6 col-md-6">
+            <div class="wow fadeInUp" data-wow-delay="0.1s" style="width:48%;float:right;">
 
-                <div class="col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="fact-item text-center bg-light h-100 p-5 pt-0"
-                         style="border-radius: 10px;border: 1px dotted #b78d65;">
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0" style="border-radius: 10px;border: 1px dotted #b78d65;">
                         <div class="fact-icon">
-                            <img src="img/icons/laws.png" style="width:70px;" alt="Icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
                         </div>
                         <h3 class="mb-3" th:text="#{order.law}">بڕیارە یاساکان</h3>
                     </div>
                 </div>
                 <br><br><br>
 
-
                 <!-- loop starts here -->
-                <div class="col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.1s" th:each="year : ${orderYears}">
-                    <a href="" th:href="@{/years-o/(year=${year})}">
-                        <div class="fact-item text-center bg-light h-100 p-5 pt-0"
-                             style="border-radius: 16px 60px;border: 1px dotted #b78d65;">
-                            <div class="fact-icon">
-                                <img src="img/icons/year.png" style="width:70px;" alt="Icon" class="wow rotateIn"
-                                     data-wow-delay="0.6s">
-                            </div>
-                            <h3 th:text="${year}"></h3>
-
-
-                        </div>
-                    </a>
+                <div th:each="year : ${orderYears}">
+                    <div class="wow fadeInUp" data-wow-delay="0.1s" style="background: #f8f8f8; border: 1px dotted #c6a688; text-align: center; padding: 4%; border-radius: 4%;">
+                        <a style="color:black;font-size: 40px;" th:href="@{/years-o/(year=${year})}" th:text="${year}"></a>
+                    </div>
+                    <br>
                 </div>
 
                 <!-- loop ends here -->
-
-
             </div>
 
 
-            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="wow fadeInUp" data-wow-delay="0.1s" style="width:48%;float:left;">
 
-                <div class="col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="fact-item text-center bg-light h-100 p-5 pt-0"
-                         style="border-radius: 10px;border: 1px dotted #b78d65;">
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0" style="border-radius: 10px;border: 1px dotted #b78d65;">
                         <div class="fact-icon">
-                            <img src="img/icons/law.png" style="width:70px;" alt="Icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
                         </div>
                         <h3 class="mb-3" th:text="#{laws}">یاساکان</h3>
                     </div>
@@ -94,19 +81,11 @@
 
 
                 <!-- loop starts here -->
-                <div class="col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.1s" th:each="year : ${lawYears}">
-                    <a href="" th:href="@{/years/(year=${year})}">
-                        <div class="fact-item text-center bg-light h-100 p-5 pt-0"
-                             style="border-radius: 60px 16px;border: 1px dotted #b78d65;">
-                            <div class="fact-icon">
-                                <img src="img/icons/year.png" style="width:70px;" alt="Icon" class="wow rotateIn"
-                                     data-wow-delay="0.6s">
-                            </div>
-
-                            <h3 th:text="${year}"></h3>
-
-                        </div>
-                    </a>
+                <div th:each="year : ${lawYears}">
+                    <div class="wow fadeInUp" data-wow-delay="0.1s" style="background: #f8f8f8; border: 1px dotted #c6a688; text-align: center; padding: 4%; border-radius: 4%;">
+                        <a style="color:black;font-size: 40px;" th:href="@{/years/(year=${year})}" th:text="${year}"></a>
+                    </div>
+                    <br>
                 </div>
                 <!-- loop ends here -->
             </div>
@@ -114,6 +93,10 @@
         </div>
     </div>
 </div>
+
+<br>
+<div style="clear:both;"></div>
+<br>
 
 <footer th:replace="fragments/fragment-footer :: footer"></footer>
 

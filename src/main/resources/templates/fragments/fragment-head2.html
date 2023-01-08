@@ -102,41 +102,45 @@
     <!-- Topbar End -->
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s" dir="rtl" style="text-align:center;">
-
-        <img class="me-3 p-0 wow fadeInDown" th:src="@{/img/3392logo1.png}" style="width:7%;" alt="Icon">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light wow fadeIn" data-wow-delay="0.1s" dir="rtl" style="text-align:center;">
+        <a th:href="@{/index}"
+           style="border-bottom: 0px solid white; margin-right: 0px; padding:0;width: 100px;">
+            <img class="me-3 p-0 wow fadeInDown" th:src="@{/img/3392logo1.png}" style="width: 90px;" alt="Icon"></a>
 
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" style="font-size: 50px;">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-5 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active wow fadeInDown" data-wow-delay="0.1s" th:href="@{/}" th:text="#{home}">سەرەکی</a>
-                <a href="about.html" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.2s" th:href="@{/about}" th:text="#{about.us}">دەربارەی بنکەی یاسادانان</a>
-                <a href="#" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.3s" th:href="@{/constitution}" th:text="#{label.const}">دەستوری هەرێم</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle wow fadeInDown" data-bs-toggle="dropdown" data-wow-delay="0.4s" th:href="@{/krd-law}" th:text="#{kurd.law}">یاساکانی هەرێم</a>
-                    <div class="dropdown-menu border-0 m-0"  style="text-align:center;">
-                        <a href="#" class="dropdown-item" th:text="#{law.range.search}" th:href="@{/law-category}"   >گەڕان بەپێی دەروازەی یاسا</a>
-                        <a href="#" class="dropdown-item" th:text="#{law.type.search}" th:href="@{/law-type}">گەڕان بەپێی جۆری یاسا</a>
-                        <a href="#" class="dropdown-item" th:text="#{law.year.search}" th:href="@{/list-years}">گەڕان بەپێی ساڵی دەرچوون</a>
+        <div class="container-fluid" style="max-width: 1200px;">
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-5 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link active wow fadeInDown" data-wow-delay="0.1s" th:href="@{/}" th:text="#{home}">سەرەکی</a>
+                    <a href="about.html" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.2s" th:href="@{/about}" th:text="#{about.us}">دەربارەی بنکەی یاسادانان</a>
+                    <a href="#" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.3s" th:href="@{/constitution}" th:text="#{label.const}">دەستوری هەرێم</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle wow fadeInDown" data-bs-toggle="dropdown" data-wow-delay="0.4s" th:href="@{/krd-law}" th:text="#{kurd.law}">یاساکانی هەرێم</a>
+                        <div class="dropdown-menu border-0 m-0"  style="text-align:center;">
+                            <a href="#" class="dropdown-item" th:text="#{law.range.search}" th:href="@{/law-category}"   >گەڕان بەپێی دەروازەی یاسا</a>
+                            <a href="#" class="dropdown-item" th:text="#{law.type.search}" th:href="@{/law-type}">گەڕان بەپێی جۆری یاسا</a>
+                            <a href="#" class="dropdown-item" th:text="#{law.year.search}" th:href="@{/list-years}">گەڕان بەپێی ساڵی دەرچوون</a>
+                        </div>
                     </div>
-                </div>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle wow fadeInDown" data-bs-toggle="dropdown" data-wow-delay="0.5s" th:href="@{/federal-law}" th:text="#{federal.law}">یاسا ئيتحاديەكان</a>
-                    <div class="dropdown-menu border-0 m-0" style="text-align:center;">
-                        <a href="https://iraqld.e-sjc-services.iq/" class="dropdown-item">یاسا ئيتحادیەکان پێش ساڵی 1992</a>
-                        <a href="https://iraqld.e-sjc-services.iq/" class="dropdown-item">یاسا ئيتحادیەکان پاش ساڵی 2005</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle wow fadeInDown" data-bs-toggle="dropdown" data-wow-delay="0.5s" th:href="@{/federal-law}" th:text="#{federal.law}">یاسا ئيتحاديەكان</a>
+                        <div class="dropdown-menu border-0 m-0" style="text-align:center;">
+                            <a href="https://iraqld.e-sjc-services.iq/" class="dropdown-item">یاسا ئيتحادیەکان پێش ساڵی 1992</a>
+                            <a href="https://iraqld.e-sjc-services.iq/" class="dropdown-item">یاسا ئيتحادیەکان پاش ساڵی 2005</a>
+                        </div>
                     </div>
+                    <a href="Bryara_Yasa.html" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.6s" th:href="@{/orders-law(pageNumber=${1})}" th:text="#{order.law}">بڕیارە یاسا</a>
+                    <a href="#" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.7s" th:href="@{/amendments(pageNumber=${1})}" th:text="#{amends.law}">یاسا هەموارکراوە یەکخراوەکان</a>
+                    <a  class="nav-item nav-link wow fadeInDown" data-wow-delay="0.8s" th:href="@{/terminated-law}" th:text="#{terminated.law}">یاسا هەڵوەشاوەکان</a>
+                    <a href="contact.html" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.9s" th:href="@{/contact-us}" th:text="#{contact.us}">پەیوەندی</a>
                 </div>
-                <a href="Bryara_Yasa.html" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.6s" th:href="@{/orders-law(pageNumber=${1})}" th:text="#{order.law}">بڕیارە یاسا</a>
-                <a href="#" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.7s" th:href="@{/amendments(pageNumber=${1})}" th:text="#{amends.law}">یاسا هەموارکراوە یەکخراوەکان</a>
-                <a  class="nav-item nav-link wow fadeInDown" data-wow-delay="0.8s" th:href="@{/terminated-law}" th:text="#{terminated.law}">یاسا هەڵوەشاوەکان</a>
-                <a href="contact.html" class="nav-item nav-link wow fadeInDown" data-wow-delay="0.9s" th:href="@{/contact-us}" th:text="#{contact.us}">پەیوەندی</a>
             </div>
-        </div>
 
+
+        </div>
     </nav>
     <!-- Navbar End -->
 </div>

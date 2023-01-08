@@ -1,18 +1,16 @@
 <footer class="footer" th:fragment="footer" style="background:#001140;">
-    <nav class="navbar navbar-expand-lg" data-wow-delay="0.1s" dir="rtl">
-        <div class="row col-lg-12" style="color:white;">
+    <nav class="navbar navbar-expand-lg" data-wow-delay="0.1s" dir="rtl" style="display: block;">
+        <div class="row col-lg-12 " style="color:white;">
 
 
-            <div class="col-md-12 text-center">
-
-                <div style="float:right;margin-right:10%;">
+                <div class="col-md-6 text-center">
                     <p class="mb-2" th:text="#{footer.adderss}"><i class="fa fa-map-marker-alt" style="color:red;"></i> هەولێر، شەقامی ٦٠م، پەرلەمانی
                         کوردستان، عراق</p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt" style="color:red;"></i> Erbil, 60S, Avenue, Kurdistan
                         parliament, Iraq</p>
                 </div>
 
-                <div style="float:left;margin-left:10%;">
+                <div class="col-md-6 text-center">
                     <p class="mb-2" th:text="#{web.links}" >بەستەرە پەیوەندارەکان</p>
                     <a style="padding-left:10px;color:white;"
                        href="https://gov.krd/moj/publications/%D9%88%DB%95%D9%82%D8%A7%D8%A6%D8%B9%DB%8C-%DA%A9%D9%88%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86/" th:text="#{waqaihi.kurdistan}">وەقایعی
@@ -20,7 +18,8 @@
                     <a style="padding-left:10px;color:white;" href="http://www.iraqld.hjc.iq/" th:text="#{iraq.federal.legislation}" >بنکەی یاسادانانی عێراقی</a>
                     <a style="color:white;" href="https://www.parliament.krd/" th:text="#{Kurdistan.parliament}" >پەرلەمانی کوردستان</a>
                 </div>
-            </div>
+
+
         </div>
     </nav>
 

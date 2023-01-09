@@ -2,23 +2,25 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-  <meta charset="utf-8">
-  <title>بڕیارە یاسا</title>
-  <meta property="og:title" content="Kurdistan Parliament - Iraq">
-  <meta property="og:description" content="As provided in the federal constitution of Iraq, Parliament has considerable power to debate and legislate on policy in a wide range of areas: health services, education and training, policing and security, the environment, natural resources, agriculture, housing, trade, industry and investment, social services and social affairs, transport and roads, culture and tourism, sport and leisure, and ancient monuments and historic buildings., The Kurdistan Parliament shares legislative power with the federal authorities in the following areas, but priority is given to the Kurdistan Parliament’s laws: customs, electric energy and its distribution, general planning, internal water resources. In addition, under Article 121 of the Iraqi federal constitution the Kurdistan Parliament has the right to amend the application of Iraq-wide legislation that falls outside of the federal authorities’ exclusive powers.">
-  <meta property="og:image" content="img/logo.png">
-  <meta property="og:url" content="https://www.parliament.krd">
-  <link rel="icon" href="img/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>بڕیارە یاسا</title>
+    <meta property="og:title" content="Kurdistan Parliament - Iraq">
+    <meta property="og:description"
+          content="As provided in the federal constitution of Iraq, Parliament has considerable power to debate and legislate on policy in a wide range of areas: health services, education and training, policing and security, the environment, natural resources, agriculture, housing, trade, industry and investment, social services and social affairs, transport and roads, culture and tourism, sport and leisure, and ancient monuments and historic buildings., The Kurdistan Parliament shares legislative power with the federal authorities in the following areas, but priority is given to the Kurdistan Parliament’s laws: customs, electric energy and its distribution, general planning, internal water resources. In addition, under Article 121 of the Iraqi federal constitution the Kurdistan Parliament has the right to amend the application of Iraq-wide legislation that falls outside of the federal authorities’ exclusive powers.">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:url" content="https://www.parliament.krd">
+    <link rel="icon" href="img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap"
+          rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -28,33 +30,311 @@
 
 <!-- Page Header Start -->
 <div class="page-header" style="width:100%;margin-bottom:5%;">
-  <div class="container py-5" style="width:100%;direction:rtl;">
-    <h3 class="display-8 text-white animate__animated animate__backInDown">جۆری یاساکان</h3>
-  </div>
+    <div class="container py-5" style="width:100%;direction:rtl;">
+        <h3 class="display-8 text-white animate__animated animate__backInDown">جۆری یاساکان</h3>
+    </div>
 </div>
 <!-- Page Header End -->
 
 <!-- bka arabi -->
 <div class="container-xxl animate__animated animate__backInDown" dir="rtl" style="padding-bottom:50px;">
-  <p style="font-size: 40px;display: flex; justify-content: center; border-bottom: 2px solid #b78d65; padding-bottom: 14px; color: black; font-weight: bold;">لیستی جۆری یاساکان</p>
+    <p style="font-size: 40px;display: flex; justify-content: center; border-bottom: 2px solid #b78d65; padding-bottom: 14px; color: black; font-weight: bold;">
+        لیستی جۆری یاساکان</p>
 </div>
 
 <!-- Facts Start -->
 <div class="container-xxl py-5" dir="rtl">
-  <div class="container pt-5">
-    <div class="row g-4" >
-      <!-- LOOP START HERE -->
-      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" th:each=" lawType: ${lawTypes}">
-        <div class="fact-item text-center bg-light h-100 p-5 pt-0">
-          <div class="fact-icon">
-            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
-          </div>
-          <h3 class="mb-3"  th:text="${lawType.getLawType()}">یاسا سروشت دەستوریەکان</h3>
+    <div class="container pt-5">
+        <div class="row g-4">
+            <!-- LOOP START HERE -->
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/naturalConstitutionLaws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{const.natural.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/civilLaws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{civil.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/crimeLaws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{crime.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/tradeLaws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{trade.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/industrialLaws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{industrial.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/managementLaws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{social.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/socialLaws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{social.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a href="#" th:href="@{/financialLaws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{finance.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/healthCareLaws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{health.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/agricultureLaws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{agricultural.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/personalStatusLaws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{personal.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/educationLaws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{educational.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/naturalResourceLaws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{natural.resource.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/activeFederalLaws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{activate.pass.federal.law}">یاسا هەموارکراو و جێبەجێکردنی یاسا فیدرالیەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/government-laws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{gov.branches.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/organization-laws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{organization.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/military-laws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{military.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/transportation-laws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{transportation.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/legal-laws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{judge.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/culture-laws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{culture.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/job-laws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{job.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/federalpassed-laws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{federal.law.passed}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/terminated-federal-laws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{terminated.iraqi.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/environment-laws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{environment.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/civil-society-laws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{civil.society.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/tourism-laws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{tourism.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/investment-laws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{investment.law}">یاسا سروشت دەستوریەکان</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                    <a th:href="@{/municipalities-laws(pageNumber=${1})}">
+                        <div class="fact-icon">
+                            <img src="img/icons/book.png" style="width:70px;" alt="Icon">
+                        </div>
+                        <h3 class="mb-3" th:text="#{municipalities.law}">یاساکانی شارەوانی</h3>
+                    </a>
+                </div>
+            </div>
+
+            <!-- LOOP ENDS HERE -->
         </div>
-      </div>
-      <!-- LOOP ENDS HERE -->
     </div>
-  </div>
 </div>
 
 
@@ -65,7 +345,8 @@
 
 
 <!-- JavaScript Libraries -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="lib/wow/wow.min.js"></script>
 <script src="lib/easing/easing.min.js"></script>

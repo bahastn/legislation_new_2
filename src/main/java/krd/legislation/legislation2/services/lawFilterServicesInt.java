@@ -72,6 +72,7 @@ public interface lawFilterServicesInt {
     Page<Legislation> civilSocietyLaws(String language, int pageNumber);
     Page<Legislation> tourismLaws(String language, int pageNumber);
     Page<Legislation> investmentLaws(String language, int pageNumber);
+    Page<Legislation> municipalitiesLaws(String language, int pageNumber);
 
 
 

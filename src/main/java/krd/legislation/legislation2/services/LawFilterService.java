@@ -26,7 +26,7 @@ public class LawFilterService implements lawFilterServicesInt {
     @Override
 
     public Page<Legislation> constLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawRange("1", language, pageable);
     }
 
@@ -34,7 +34,7 @@ public class LawFilterService implements lawFilterServicesInt {
 
     public Page<Legislation> normalLaws(String language, int pageNumber) {
 
-        Pageable pageable = PageRequest.of(pageNumber, 40
+        Pageable pageable = PageRequest.of(pageNumber, 20
                 , Sort.by("lawNumber").ascending()
                         .and(Sort.by("issueDate").descending()));
 
@@ -43,126 +43,123 @@ public class LawFilterService implements lawFilterServicesInt {
 
     @Override
     public Page<Legislation> orderLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40, Sort.by("issueDate").descending()
+        Pageable pageable = PageRequest.of(pageNumber, 20, Sort.by("issueDate").descending()
                 .and(Sort.by("lawNumber").ascending()));
         return legislationRepository.findLawByLawRange("3", language, pageable);
     }
 
     @Override
     public Page<Legislation> orderLegalLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawRange("4", language, pageable);
     }
 
     @Override
     public Page<Legislation> managementOrdersLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawRange("5", language, pageable);
     }
 
     @Override
 //    @Cacheable("insruction")
     public Page<Legislation> instructions(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawRange("6", language, pageable);
     }
 
-    // filter by types
+
+
+    // filter by types ----------------------------------------------------------------------
 
 
     @Override
     public Page<Legislation> naturalConstitutionLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("1", language, pageable);
     }
 
-//    @Override
-//    public Page<Legislation> naturalConstitutionLaws(String language, int pageNumber) {
-//        Pageable pageable = PageRequest.of(pageNumber, 10);
-//        return legislationRepository.findLawByLawType2( "1",language, "1","1",    pageable);
-//    }
 
     @Override
     public Page<Legislation> civilLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("2", language, pageable);
     }
 
     @Override
     public Page<Legislation> crimeLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("3", language, pageable);
     }
 
     @Override
     public Page<Legislation> tradeLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("4", language, pageable);
     }
 
     @Override
     public Page<Legislation> industrialLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("5", language, pageable);
     }
 
     @Override
     public Page<Legislation> managementLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("6", language, pageable);
     }
 
     @Override
     public Page<Legislation> socialLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("7", language, pageable);
     }
 
     @Override
     public Page<Legislation> financialLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("8", language, pageable);
     }
 
     @Override
     public Page<Legislation> healthCareLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("9", language, pageable);
     }
 
     @Override
     public Page<Legislation> agricultureLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("10", language, pageable);
     }
 
     @Override
     public Page<Legislation> personalStatusLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("11", language, pageable);
     }
 
     @Override
     public Page<Legislation> educationLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("12", language, pageable);
     }
 
     @Override
     public Page<Legislation> naturalResourceLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("13", language, pageable);
     }
 
     @Override
     public Page<Legislation> federalLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("14", language, pageable);
     }
 
     @Override
     public Page<Legislation> governmentsLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("15", language, pageable);
     }
 
@@ -174,71 +171,75 @@ public class LawFilterService implements lawFilterServicesInt {
 
     @Override
     public Page<Legislation> militaryLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("17", language, pageable);
     }
 
     @Override
     public Page<Legislation> transportationLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("18", language, pageable);
     }
 
     @Override
     public Page<Legislation> legalSystemLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("19", language, pageable);
     }
 
     @Override
     public Page<Legislation> cultureLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("20", language, pageable);    }
 
     @Override
     public Page<Legislation> jobLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 10);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("21", language, pageable);
     }
 
     @Override
     public Page<Legislation> federalPassedLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("22", language, pageable);
     }
 
     @Override
     public Page<Legislation> terminationFederalLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("23", language, pageable);
     }
 
     @Override
     public Page<Legislation> environmentalLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("24", language, pageable);
     }
 
     @Override
     public Page<Legislation> civilSocietyLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("25", language, pageable);
     }
 
     @Override
     public Page<Legislation> tourismLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("26", language, pageable);
     }
 
     @Override
     public Page<Legislation> investmentLaws(String language, int pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 40);
+        Pageable pageable = PageRequest.of(pageNumber, 20);
         return legislationRepository.findLawByLawType("27", language, pageable);
     }
 
-
-    /*
+    @Override
+    public Page<Legislation> municipalitiesLaws(String language, int pageNumber) {
+        Pageable pageable = PageRequest.of(pageNumber, 20);
+        return legislationRepository.findLawByLawType("28", language, pageable);
+    }
+/*
 
     Find By years
     ------------------------------------------------------------

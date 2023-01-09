@@ -63,4 +63,51 @@ public class IndexController {
 
         return "index";
     }
+    @GetMapping("/")
+    public String index2(Model model) {
+
+        String lang = LocaleContextHolder.getLocale().getLanguage();
+
+        if (lang == "ku"){
+            lang = "1";
+        }
+        if(lang == "ar"){
+            lang = "2";
+        }
+
+        Integer totalNumberOfLaws = aboutUsServices.getTotalInsertedLaw(lang, "2");
+
+        if(aboutUsServices.getTotalInsertedLaw(lang, "2") != null) {
+            model.addAttribute("law", aboutUsServices.getTotalInsertedLaw(lang, "2"));
+        }
+        else {
+            model.addAttribute("law",0);
+        }
+        if(aboutUsServices.getTotalInsertedLaw(lang, "3") != null) {
+            model.addAttribute("order", aboutUsServices.getTotalInsertedLaw(lang, "3"));
+        }
+        else {
+            model.addAttribute("order",0);
+        }
+        if(aboutUsServices.getTotalInsertedLaw(lang, "4") != null) {
+            model.addAttribute("management", aboutUsServices.getTotalInsertedLaw(lang, "4"));
+        }
+        else {
+            model.addAttribute("management",0);
+        }
+        if(aboutUsServices.getTotalInsertedLaw(lang, "5") != null) {
+            model.addAttribute("managementOrder", aboutUsServices.getTotalInsertedLaw(lang, "5"));
+        }
+        else {
+            model.addAttribute("managementOrder",0);
+        }
+        if(aboutUsServices.getTotalInsertedLaw(lang, "6") != null) {
+            model.addAttribute("guide", aboutUsServices.getTotalInsertedLaw(lang, "6"));
+        }
+        else {
+            model.addAttribute("guide",0);
+        }
+
+        return "index";
+    }
 }

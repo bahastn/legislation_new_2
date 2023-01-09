@@ -47,9 +47,9 @@
                         <div class="col-12 wow fadeInDown" data-wow-delay="0.1s">
                             <div class="d-flex align-items-start">
                                 <i class="fa fa-book" aria-hidden="true" style="font-size:30px;color:#b78d65;"></i>
-                                <a href="#" style="font-size:15px;">
+                                <a th:href="@{/amends-detail/(id=${law.getAmendId})}" style="font-size:15px;">
                                     <div class="ms-5">
-                                        <p th:href="@{/amends-detail/(name=${law.getAmendTitle()})}"
+                                        <p
                                             th:text="${law.getAmendTitle()}" style="color: black;font-size: 20px;padding-right: 10px;"></p>
                                     </div>
                                 </a>

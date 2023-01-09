@@ -22,6 +22,9 @@ public class AmendmentLawServices {
         return collectedAmendRepository.findAllAmends( language, pageable);
 
     }
+    public CollectedAmend findAmendById(Long id ){
+        return collectedAmendRepository.findByAmendId(id);
+    }
 
 
 }

@@ -38,89 +38,13 @@
                  style="border:1px dotted #c55e00;border-radius:30px 5px;padding-bottom:15px;">
                 <br>
                 <div class="animate__animated animate__backInDown animate__delay-0.4s animate__faster" style="text-align: center;font-weight: bold;border-bottom: 1px solid #b78d65;">
-                    <h4 th:text="${law.getLawTitle()}">ناونیشانی یاسا</h4>
+                    <h4 th:text="${amend.getAmendTitle()}">ناونیشانی یاسا</h4>
                 </div>
-                <div th:switch="${law.getLawCategory()}">
-
-                        <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.3s" style="color:#b78d65;"
-                           aria-hidden="true">
-                            <h5 th:case="'2'" th:text="#{law.number} + ' : ' + ${law.getLawNumber()}"></h5>
-                            <h5 th:case="'3'" th:text="#{order.number} + ' : ' + ${law.getLawNumber()}"></h5>
-                            <h5 th:case="'4'" th:text="#{act.number} + ' : ' + ${law.getLawNumber()}"></h5>
-                            <h5 th:case="'5'" th:text="#{order.management.number} + ' : ' + ${law.getLawNumber()}"></h5>
-                            <h5 th:case="'6'" th:text="#{regualtion.number} + ' : ' + ${law.getLawNumber()}"></h5>
-                        </i> </b><br><br>
-                </div>
-
-                    <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.4s" style="color:#b78d65;"
-                      aria-hidden="true"></i>
-                    <h5 th:text="#{law.issue.year} + ' : ' + ${law.getIssueDate()}"></h5>
-
-                <div th:switch="${law.getActive()}">
-                    <b><i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.5s" style="color:#b78d65;"
-                          aria-hidden="true"></i>
-                        <h5 class="h6 fields" th:case="'1'" th:text="#{active.law.text}"></h5>
-                        <h5 class="h6 fields" th:case="'0'" th:text="#{terminated.law.text}"></h5>
-
-                </div>
-
-                <div>
-
-
-                    <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
-                       aria-hidden="true"></i>
-                    <h4 th:text="#{law.edit.list} + ' : ' + ${listOfAmends.size()} "></h4>
-                    <br><br>
-                    <ul style="margin-right:2%;list-style: none;" th:each="laws : ${listOfAmends}">
-                        <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#"
-                                                                             th:href="@{/law-detail/(id=${laws.getLawId()})}"
-                                                                             th:text=" '  '+ ${laws.getLawTitle()}  ">
-                            یاسای دووه‌م هه‌مواركردنی قانوونی ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان ـ ژماره‌ ساڵی
-                            1992</a></li>
-                    </ul>
-
-                </div>
-
-                    <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
-                       aria-hidden="true"></i>
-                    <h5 th:text="#{law.related.list} +' : ' + ${listOfRelatedLaw.size()} "></h5>
-
-                    <ul style="margin-right:2%;list-style: none;" th:each="lawRe : ${listOfRelatedLaw}">
-                        <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#"
-                                                            th:href="@{/law-detail/(id=${lawRe.getLawId()})}"
-                                                                th:text="${lawRe.getLawTitle()}">یاسای
-                            ژماره‌ (12)ی ساڵی
-                            2009
-                            هه‌مواركردنی هه‌شته‌می یاسای ئه‌نجومه‌نی وه‌زیرانی هه‌رێمی كوردستان-عێراق ژماره‌
-                            (3)ی
-                            ساڵی 1992ی هه‌مواركراو.</a></li>
-
-                    </ul>
-
-
-
-
-
-                    <i class="fa fa-bookmark wow fadeInDown" data-wow-delay="0.6s" style="color:#b78d65;"
-                       aria-hidden="true"></i>
-                    <h4 th:text="#{law.protocal.list} "></h4>
-
-                    <ul style="margin-right:2%;list-style: none;" th:if="${law.getProtocols() != null}">
-                        <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#"
-                              th:href="@{/download-protocol/(id=${law.getLawId() })}"
-                                th:text="${law.getProtocols().getProtocolTitle()}">یاسای
-                        ی هه‌مواركراو.</a></li>
-
-                    </ul>
-
-                </h6>
-
             </div>
 
         </div>
 
         <br>
-
 
         <div class="row g-3">
             <div>
@@ -130,11 +54,11 @@
                 </div>
                 <div style="float:left;">
                 <img src="../img/pdf.png" style="width:40px;"
-                        th:onclick="|window.location.href='@{/download/(id=${law.getPdfDocument().getDocumentId()})}'|"
+                     th:onclick="|window.location.href='@{/download/(id=${amend.getPdfDocument().getDocumentId()})}'|"
                         >
 
                 <img src="../img/word.png" style="width:40px;"
-                        th:onclick="|window.location.href='@{/download-word/(id=${law.getWordDocument().getDocumentId()})}'|"
+                     th:onclick="|window.location.href='@{/download-word/(id=${amend.getWordDocument().getDocumentId()})}'|"
                         >
                 </div>
             </div>

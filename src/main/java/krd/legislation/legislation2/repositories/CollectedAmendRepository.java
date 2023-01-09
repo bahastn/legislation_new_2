@@ -23,8 +23,8 @@ public interface CollectedAmendRepository extends JpaRepository<CollectedAmend, 
     @Query("SELECT c FROM CollectedAmend c where  c.language = ?1 order by c.amendTitle DESC ")
     List<CollectedAmend> findAllCollectedAmend(String language);
 
-    @Query("SELECT c FROM CollectedAmend c where  c.amendTitle = ?1 ")
-    CollectedAmend findByAmendTitle(String name);
+    @Query("SELECT c FROM CollectedAmend c where  c.amendId = ?1 ")
+    CollectedAmend findByAmendId(Long id);
     @Query("SELECT c FROM CollectedAmend c where  c.language = ?1")
     Page<CollectedAmend> findAllAmends( String language, Pageable pageable);
 }

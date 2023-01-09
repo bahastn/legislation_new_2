@@ -78,26 +78,26 @@ public class FileDownloadController {
 
     }
 
-//    @GetMapping("download-protocol")
-//    public ResponseEntity<Object> downloadProtocols(@Param("id") Long id, HttpServletResponse response) throws Exception {
-//
-//        Legislation legislation = legislationRepository.findByLawId(id);
-//        String path = legislation.getProtocols().getPath();
-//        File file = new File(path);
-//        InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.add("Content-Disposition", String.format(file.getName()));
-//        headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
-//        headers.add("Pragma", "no-cache");
-//        headers.add("Expires", "0");
-//        ResponseEntity<Object> responseEntity = ResponseEntity
-//                .ok().headers(headers).
-//                contentLength(file.length()).
-//                contentType(MediaType.parseMediaType("application/PDF")).
-//                body(resource);
-//
-//        return responseEntity;
-//    }
+    @GetMapping("download-protocol")
+    public ResponseEntity<Object> downloadProtocols(@Param("id") Long id, HttpServletResponse response) throws Exception {
+
+        Legislation legislation = legislationRepository.findByLawId(id);
+        String path = legislation.getProtocols().getPath();
+        File file = new File(path);
+        InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Disposition", String.format(file.getName()));
+        headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
+        headers.add("Pragma", "no-cache");
+        headers.add("Expires", "0");
+        ResponseEntity<Object> responseEntity = ResponseEntity
+                .ok().headers(headers).
+                contentLength(file.length()).
+                contentType(MediaType.parseMediaType("application/PDF")).
+                body(resource);
+
+        return responseEntity;
+    }
 
 
 }

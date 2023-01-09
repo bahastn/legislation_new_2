@@ -21,81 +21,26 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 public class AmendmentsController {
-//
-//    private CollectedAmendRepository collectedAmendRepository;
-//
-//    public AmendmentsController(CollectedAmendRepository collectedAmendRepository) {
-//        this.collectedAmendRepository = collectedAmendRepository;
-//    }
-//
-//    @GetMapping("/amendments")
-//    public String viewAmendments(Model model){
-//
-//        List<Legislation> list = new ArrayList<>();
-//        String title = "";
-//        try {
-//            String lang = LocaleContextHolder.getLocale().getLanguage();
-//            if (lang.equals("ku")) {
-//                list = getLegList(collectedAmendRepository.findAllCollectedAmend("1"));
-//                title = "یاسا هەموارکراوە یەکخراوەکان";
-//            } else if (lang.equals("ar")) {
-//                list = getLegList(collectedAmendRepository.findAllCollectedAmend("2"));
-//                title = "";
-//            } else {
-//                list = getLegList(collectedAmendRepository.findAllCollectedAmend("3"));
-//                title = "";
-//
-//            }
-//
-//
-//        } catch (Exception e) {
-//            e.getMessage();
-//        }
-//        model.addAttribute("laws", list);
-//        model.addAttribute("title", title);
-//
-//
-//        return "amendments";
-//    }
-//
-//    @RequestMapping(value = "amends-detail", method = {RequestMethod.GET, RequestMethod.POST})
-//    public String showAmendDetail(@RequestParam String name, Model model) {
-//        try {
-//            CollectedAmend amend = collectedAmendRepository.findByAmendTitle(name);
-//
-//            model.addAttribute("amend", amend);
-//        }
-//       catch (Exception err){
-//            err.getCause().getMessage();
-//           System.out.println("------------------------------");
-//            throw new RuntimeException("can't find record");
-//       }
-//        return "amends-detail";
-//    }
-//
-//    private List<Legislation> getLegList(List<CollectedAmend> amends){
-//        List<Legislation> list = new ArrayList<>();
-//        Collections.sort(amends, Comparator.comparingInt(CollectedAmend ::getIssueDate));
-//
-//        for (int i = 0; i < amends.size(); i++) {
-//           Legislation leg = new Legislation();
-//            leg.setLawTitle(amends.get(i).getAmendTitle());
-//            leg.setLawContent(amends.get(i).getAmendContent());
-//            leg.setPdfDocument(amends.get(i).getPdfDocument());
-//            leg.setWordDocument(amends.get(i).getWordDocument());
-//
-//
-//            list.add(leg);
-//
-//        }
-//        return list;
-//    }
-
     private AmendmentLawServices amendmentLawServices;
-
     public AmendmentsController(AmendmentLawServices amendmentLawServices) {
         this.amendmentLawServices = amendmentLawServices;
     }
+
+    @RequestMapping(value = "amends-detail", method = {RequestMethod.GET, RequestMethod.POST})
+    public String showAmendDetail(@RequestParam Long id, Model model) {
+        try {
+            CollectedAmend amend = amendmentLawServices.findAmendById(id);
+
+            model.addAttribute("amend", amend);
+        }
+       catch (Exception err){
+            err.getCause().getMessage();
+           System.out.println("------------------------------");
+            throw new RuntimeException("can't find record");
+       }
+        return "amends-detail";
+    }
+
 
     @RequestMapping(value = "/amendments", method = RequestMethod.GET)
     public String geAmendmentLaw(@RequestParam int pageNumber, Model model) {

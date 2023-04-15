@@ -15,7 +15,6 @@ public class TerminatedLawServices {
     }
 
     public List<Legislation> terminatedLaws(String language) {
-
         return legislationRepository.findTerminatedLaw("1", language, "0");
 
     }

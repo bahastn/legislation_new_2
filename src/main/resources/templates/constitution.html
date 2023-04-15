@@ -44,8 +44,8 @@
 
                     <div class="col-12 wow fadeInDown" data-wow-delay="0.1s">
                         <div class="d-flex align-items-start">
-                            <img class="flex-shrink-0" th:src="@{/img/icons/book.png}" alt="Icon" style="padding-left:5px;width:4%;">
-                            <a href="document_reader.html?documentName='lezhna10kas.jpg'" target="_blank" style="padding:20px 0px;" >
+                            <img class="flex-shrink-0 " th:src="@{/img/icons/book.png}" alt="Icon" style="padding-left:5px;width:4%;">
+                            <a  th:href="@{/document_reader/?fileName=lezhna10kas.jpg}"  target="_blank" style="padding:20px 0px;" >
                                 <div class="ms-4">لیژنەیەکی (١٠) کەسی پەرلەمانی کوردستان ساڵی ٢٠٠٢</div>
                             </a>
                         </div>
@@ -169,8 +169,8 @@
 
                     <div class="col-12 wow fadeInDown" data-wow-delay="0.1s">
                         <div class="d-flex align-items-start">
-                            <img class="flex-shrink-0" th:src="@{/img/icons/book.png}" alt="Icon" style="padding-left:5px;width:4%;">
-                            <a href="document_reader.html?documentName='harem.jpg'" target="_blank" style="padding:20px 0px;" >
+                            <img class="flex-shrink-0 previewImage" th:src="@{/img/icons/book.png}" alt="Icon" style="padding-left:5px;width:4%;">
+                            <a th:href="@{/document_reader/?fileName=harem.jpg}" target="_blank" style="padding:20px 0px;" >
                                 <div class="ms-4">نامەی بەڕێز سەرۆکی هەرێمی کوردستان لە ٢٨ی حوزەیرانی ٢٠٢٢</div>
                             </a>
                         </div>
@@ -178,8 +178,8 @@
 
                     <div class="col-12 wow fadeInDown" data-wow-delay="0.1s">
                         <div class="d-flex align-items-start">
-                            <img class="flex-shrink-0" th:src="@{/img/icons/book.png}" alt="Icon" style="padding-left:5px;width:4%;">
-                            <a href="document_reader.html?documentName='par.jpg'" target="_blank" style="padding:20px 0px;" >
+                            <img class="flex-shrink-0 previewImage" th:src="@{/img/icons/book.png}" alt="Icon" style="padding-left:5px;width:4%;">
+                            <a th:href="@{/document_reader/?fileName=par.jpg}" target="_blank" style="padding:20px 0px;" >
                                 <div class="ms-4">فەرمانی بەڕێز سەرۆکی پەرلەمان ژمارە/٢ لە ٢٠٢٢/٨/٢٤</div>
                             </a>
                         </div>
@@ -216,5 +216,6 @@
 <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 <!-- Template Javascript -->
 <script src="js/main.js"></script>
+<script defer th:src="@{js/preview.js}"></script>
 </body>
 </html>

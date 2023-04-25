@@ -35,10 +35,6 @@ public class AdvancedSearch {
             return "index";
         }
       List<Legislation> list = advancedSearchServices.fullTextSearch(keyword);
-//        List<Legislation> list = new ArrayList<>();
-//        Legislation l = new Legislation();
-//        l.setLawTitle("Test Law Title");
-//        list.add(l);
         model.addAttribute("laws", list );
         return "search";
     }

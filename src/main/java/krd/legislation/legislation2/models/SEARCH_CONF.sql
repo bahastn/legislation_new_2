@@ -2,8 +2,8 @@ alter table legsilation
     add search tsvector
     generated always as (
     setweight(to_tsvector('simple',law_title), 'A')  || ' ' ||
-    setweight(to_tsvector('simple',law_type), 'B') || ' ' ||
-    setweight(to_tsvector('simple',law_category), 'D') :: tsvector
+    setweight(to_tsvector('simple',issue_date), 'B') || ' ' ||
+    setweight(to_tsvector('simple',law_content), 'D') :: tsvector
 
     ) stored;
 

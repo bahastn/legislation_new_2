@@ -1,0 +1,9 @@
+
+
+                                    <option value="1">دەستوری</option>
+                                    <option value="2">یاسای ئاسایی</option>
+                                    <option value="3">بڕیارە یاسا</option>
+                                    <option value="4">پەیڕەو</option>
+                                    <option value="5">بڕیاری کارگێڕی</option>
+                                    <option value="6">رێنمایی</option>
+                                </select>

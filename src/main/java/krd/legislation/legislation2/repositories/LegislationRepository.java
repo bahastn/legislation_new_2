@@ -137,7 +137,7 @@ public interface LegislationRepository extends JpaRepository<Legislation, Long> 
 //
 //
 
-    @Query(nativeQuery = true, value = "Select * from legsilation where search @@websearch_to_tsquery('english',?1);")
+    @Query(nativeQuery = true, value = "Select * from legsilation where law_title @@websearch_to_tsquery(?1);")
     List<Legislation> fullTextSearch(String keyword);
 
     /**

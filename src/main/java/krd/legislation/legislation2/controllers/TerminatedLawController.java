@@ -4,12 +4,12 @@ package krd.legislation.legislation2.controllers;
 import krd.legislation.legislation2.models.Legislation;
 import krd.legislation.legislation2.services.TerminatedLawServices;
 import org.springframework.context.i18n.LocaleContextHolder;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class TerminatedLawController {
@@ -20,24 +20,24 @@ public class TerminatedLawController {
     }
 
     @RequestMapping(value = "/terminated-law", method = RequestMethod.GET)
-    public String getTerminatedLaw(Model model) {
+    public String getTerminatedLaw(@RequestParam int pageNumber, Model model) {
 
-        List<Legislation> list = null;
+        Page<Legislation> list = null;
         String mapping = "/terminated-law";
         String title = "";
 
         try {
             String lang = LocaleContextHolder.getLocale().getLanguage();
             if (lang.equals("ku")) {
-                list = terminatedLawServices.terminatedLaws("1");
+                list = terminatedLawServices.terminatedLaws("1", pageNumber -1);
                 title = "لیستی یاسا هەڵوەشاوەکان";
 
             } else if (lang.equals("ar")) {
-                list = terminatedLawServices.terminatedLaws("2");
-                title = "قائمة القرارات";
+                list = terminatedLawServices.terminatedLaws("2", pageNumber -1);
+                title = "قائمة التشريعات الملغية";
             } else {
-                list = terminatedLawServices.terminatedLaws("3");
-//                title = "لیستی بڕیارەکان";
+                list = terminatedLawServices.terminatedLaws("3", pageNumber -1);
+                title = "";
             }
 
         } catch (Exception e) {

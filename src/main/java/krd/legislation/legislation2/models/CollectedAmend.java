@@ -24,6 +24,7 @@ public class CollectedAmend {
     private String amendContent;
     //    @Size(min = 1, max = 10000)
     private int issueDate;
+    private int lawNumber;
     @CreationTimestamp
     private Timestamp addedDate;
     private String language;
@@ -64,6 +65,14 @@ public class CollectedAmend {
 
     public void setIssueDate(int issueDate) {
         this.issueDate = issueDate;
+    }
+
+    public int getLawNumber() {
+        return lawNumber;
+    }
+
+    public void setLawNumber(int lawNumber) {
+        this.lawNumber = lawNumber;
     }
 
     public Timestamp getAddedDate() {

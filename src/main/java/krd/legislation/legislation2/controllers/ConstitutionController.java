@@ -9,4 +9,9 @@ public class ConstitutionController {
     public String constitutionLaw() {
         return "constitution";
     }
+
+    @GetMapping("/dasturiHaremiKurdistan2")
+    public String constitutionLawKurdistan() {
+        return "DasturiHaremiKurdistan";
+    }
 }

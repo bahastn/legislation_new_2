@@ -51,7 +51,7 @@ public interface LegislationRepository extends JpaRepository<Legislation, Long> 
 
 //
     @Query("SELECT l FROM Legislation l where  l.approved = 1 AND l.classification = ?1 and l.language = ?2 and  l.active = ?3 ")
-    List<Legislation> findTerminatedLaw(String classification, String language, String active);
+    Page<Legislation> findTerminatedLaw(String classification, String language, String active, Pageable pageable);
 //
 //    /**
 //     * advanced search

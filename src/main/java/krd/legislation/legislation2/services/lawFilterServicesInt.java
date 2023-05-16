@@ -89,7 +89,7 @@ public interface lawFilterServicesInt {
 
     //terminated law
 
-    List<Legislation> terminatedLaws(String language);
+    Page<Legislation> terminatedLaws(String language);
 
     //Edit search
     List<Legislation> searchForEdit(Integer year, Integer lawNumber, String language);

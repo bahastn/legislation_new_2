@@ -71,7 +71,6 @@ public class LawFilterService implements lawFilterServicesInt {
     }
 
 
-
     // filter by types ----------------------------------------------------------------------
 
 
@@ -213,7 +212,8 @@ public class LawFilterService implements lawFilterServicesInt {
     public Page<Legislation> cultureLaws(String language, int pageNumber) {
         Pageable pageable = PageRequest.of(pageNumber, 20, Sort.by("issueDate").descending()
                 .and(Sort.by("lawNumber").ascending()));
-        return legislationRepository.findLawByLawType("20", language, pageable);    }
+        return legislationRepository.findLawByLawType("20", language, pageable);
+    }
 
     @Override
     public Page<Legislation> jobLaws(String language, int pageNumber) {
@@ -301,15 +301,14 @@ public class LawFilterService implements lawFilterServicesInt {
     //terminated laws
 
     @Override
-    public List<Legislation> terminatedLaws(String language) {
-
-        return legislationRepository.findTerminatedLaw("1", language, "0");
+    public Page<Legislation> terminatedLaws(String language) {
+        Pageable pageable = null;
+        return legislationRepository.findTerminatedLaw("1", language, "0", pageable);
     }
 
 
-
     @Override
-    public List<Legislation> searchForEdit(Integer  year, Integer  lawNumber, String language) {
+    public List<Legislation> searchForEdit(Integer year, Integer lawNumber, String language) {
 
 //
 //

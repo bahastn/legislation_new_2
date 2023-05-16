@@ -10,7 +10,7 @@
     </parent>
     <groupId>krd.legislation</groupId>
     <artifactId>legislation2</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
     <name>legislation2</name>
     <description>legislation2</description>
     <properties>

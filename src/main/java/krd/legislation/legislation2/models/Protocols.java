@@ -18,8 +18,8 @@ public class Protocols {
     private String protocolTitle;
     private Integer protocolNumber;
     private int protocolIssueYear;
-    private int pageNumberFrom;
-    private int getPageNumberTo;
+    private String pageNumberFrom;
+    private String getPageNumberTo;
     private String path;
 
     public Long getProtocolId() {
@@ -54,19 +54,19 @@ public class Protocols {
         this.protocolIssueYear = protocolIssueYear;
     }
 
-    public int getPageNumberFrom() {
+    public String getPageNumberFrom() {
         return pageNumberFrom;
     }
 
-    public void setPageNumberFrom(int pageNumberFrom) {
+    public void setPageNumberFrom(String pageNumberFrom) {
         this.pageNumberFrom = pageNumberFrom;
     }
 
-    public int getGetPageNumberTo() {
+    public String getGetPageNumberTo() {
         return getPageNumberTo;
     }
 
-    public void setGetPageNumberTo(int getPageNumberTo) {
+    public void setGetPageNumberTo(String getPageNumberTo) {
         this.getPageNumberTo = getPageNumberTo;
     }
 

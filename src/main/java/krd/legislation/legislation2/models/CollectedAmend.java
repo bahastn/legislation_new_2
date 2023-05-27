@@ -35,6 +35,8 @@ public class CollectedAmend {
     @ManyToOne
     private DocumentPDF pdfDocument;
 
+
+
     public Long getAmendId() {
         return amendId;
     }
@@ -67,6 +69,7 @@ public class CollectedAmend {
         this.issueDate = issueDate;
     }
 
+    @Column(name = "LAW_NUMBER")
     public int getLawNumber() {
         return lawNumber;
     }
@@ -114,4 +117,5 @@ public class CollectedAmend {
     public void setPdfDocument(DocumentPDF pdfDocument) {
         this.pdfDocument = pdfDocument;
     }
+
 }

@@ -12,11 +12,8 @@ public class Dbint implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-//        LawTypes lawTypes = new LawTypes();
-//        lawTypes.setLawTypeNumber(1);
-//        lawTypes.setLawType("Kurdistan");
-//       lawTypeRepository.save(lawTypes);
-
+        GenerateJsonFile gson = new GenerateJsonFile();
+        gson.generateJson();
     }
 
 }

@@ -10,11 +10,12 @@ public class FirstProject {
     @GetMapping("/firstproject")
     public String viewFirstProject()
     {
-        String lang = LocaleContextHolder.getLocale().getLanguage();
-        if (lang.equals("ar")) {
-            return "DasturiHaremiKurdistan-ar";
-        }
             return "firstproject";
+    }
+    @GetMapping("/DasturiHaremiKurdistan-ar")
+    public String viewFirstProjectAr(){
+            return "DasturiHaremiKurdistan-ar";
+
     }
 
     @GetMapping("/lizhna18")

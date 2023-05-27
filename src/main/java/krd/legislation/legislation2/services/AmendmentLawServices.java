@@ -18,10 +18,12 @@ public class AmendmentLawServices {
     }
 
     public Page<CollectedAmend> amendLaws(String language, Integer pageNumber) {
-        Pageable pageable = PageRequest.of(pageNumber, 20);
+        Pageable pageable = PageRequest.of(pageNumber, 20, Sort.by("issueDate").descending()
+                .and(Sort.by("lawNumber").ascending()));
         return collectedAmendRepository.findAllAmends( language, pageable);
 
     }
+
     public CollectedAmend findAmendById(Long id ){
         return collectedAmendRepository.findByAmendId(id);
     }

@@ -14,4 +14,9 @@ public class ConstitutionController {
     public String constitutionLawKurdistan() {
         return "DasturiHaremiKurdistan";
     }
+    @GetMapping("/constitution_project_2009_ar")
+    public String constitutionProjact2009Ar() {
+        return "constitution_project_ar";
+    }
+
 }

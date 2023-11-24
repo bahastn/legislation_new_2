@@ -105,7 +105,7 @@
                         <h4 th:text="#{law.protocal.list} "></h4>
 
                         <ul style="margin-right:2%;list-style: none;" th:if="${law.getProtocols() != null}">
-                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#"
+                            <li><i class="fa fa-link" aria-hidden="true"></i> <a href="#" target="_blank"
                                                                                  th:href="@{/download-protocol/(id=${law.getLawId() })}"
                                                                                  th:text="${law.getProtocols().getProtocolTitle()}">یاسای
                                 ی هه‌مواركراو.</a></li>

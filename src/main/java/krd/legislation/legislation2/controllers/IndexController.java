@@ -55,6 +55,16 @@ public class IndexController {
         } else {
             model.addAttribute("guide", 0);
         }
+        if (aboutUsServices.getTotalProtocolBooks() != null) {
+            String lang2 = LocaleContextHolder.getLocale().getLanguage();
+            if (lang2.equals("ku")) {
+                model.addAttribute("protocols", aboutUsServices.getTotalProtocolBooks());
+            } else {
+                model.addAttribute("protocols", 0);
+            }
+        } else {
+            model.addAttribute("protocols", 0);
+        }
 
         return "index";
     }
@@ -85,23 +95,32 @@ public class IndexController {
             model.addAttribute("order", 0);
         }
         Integer totalManagement = aboutUsServices.getTotalInsertedLaw(lang, "6");
-        if ( totalManagement!= null) {
+        if (totalManagement != null) {
             model.addAttribute("management", totalManagement);
         } else {
             model.addAttribute("management", 0);
         }
         Integer totalManagementOrder = aboutUsServices.getTotalInsertedLaw(lang, "5");
-        if ( totalManagementOrder != null) {
+        if (totalManagementOrder != null) {
             model.addAttribute("managementOrder", totalManagementOrder);
         } else {
             model.addAttribute("managementOrder", 0);
         }
-        Integer totalGuide= aboutUsServices.getTotalInsertedLaw(lang, "4");
+        Integer totalGuide = aboutUsServices.getTotalInsertedLaw(lang, "4");
         if (totalGuide != null) {
             model.addAttribute("guide", totalGuide);
         } else {
             model.addAttribute("guide", 0);
         }
+        if (aboutUsServices.getTotalProtocolBooks() != null) {
+            String lang2 = LocaleContextHolder.getLocale().getLanguage();
+            if (lang2.equals("ku")) {
+                model.addAttribute("protocols", aboutUsServices.getTotalProtocolBooks());
+            }
+        } else {
+            model.addAttribute("protocols", 0);
+        }
+
 
         return "index";
     }

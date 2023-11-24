@@ -5,22 +5,29 @@ package krd.legislation.legislation2.controllers;
 import krd.legislation.legislation2.models.DocumentPDF;
 import krd.legislation.legislation2.models.DocumentWord;
 import krd.legislation.legislation2.models.Legislation;
+import krd.legislation.legislation2.models.ProtocolBooks;
 import krd.legislation.legislation2.repositories.DocumentPDFRepositories;
 import krd.legislation.legislation2.repositories.DocumentWordRepositories;
 import krd.legislation.legislation2.repositories.LegislationRepository;
+import krd.legislation.legislation2.repositories.ProtocolsRepository;
 import krd.legislation.legislation2.services.DocumentServices;
 import org.springframework.core.io.InputStreamResource;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileInputStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Optional;
 
 @RestController
@@ -29,13 +36,14 @@ public class FileDownloadController {
     private DocumentPDFRepositories documentPDFRepositories;
     private DocumentWordRepositories documentWordRepositories;
     private LegislationRepository legislationRepository;
+    private ProtocolsRepository protocolsRepository;
 
-    public FileDownloadController(DocumentServices documentServicesPdf, DocumentPDFRepositories documentPDFRepositories, DocumentWordRepositories documentWordRepositories, LegislationRepository legislationRepository) {
+    public FileDownloadController(DocumentServices documentServicesPdf, DocumentPDFRepositories documentPDFRepositories, DocumentWordRepositories documentWordRepositories, LegislationRepository legislationRepository, ProtocolsRepository protocolsRepository) {
         this.documentServicesPdf = documentServicesPdf;
         this.documentPDFRepositories = documentPDFRepositories;
         this.documentWordRepositories = documentWordRepositories;
         this.legislationRepository = legislationRepository;
-
+        this.protocolsRepository = protocolsRepository;
     }
 
     @GetMapping("download")
@@ -99,6 +107,27 @@ public class FileDownloadController {
         return responseEntity;
     }
 
+    @GetMapping("download-protocol-book-old")
+    public ResponseEntity<Object> downloadProtocolsBook(@Param("id") Long id, HttpServletResponse response) throws Exception {
+
+        ProtocolBooks protocolBooks = protocolsRepository.getProtocol(id);
+        String path = protocolBooks.getPath();
+        File file = new File(path);
+        InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Disposition", String.format(file.getName()));
+        headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
+        headers.add("Pragma", "no-cache");
+        headers.add("Expires", "0");
+        ResponseEntity<Object> responseEntity = ResponseEntity
+                .ok().headers(headers).
+                contentLength(file.length()).
+                contentType(MediaType.parseMediaType("application/PDF")).
+                body(resource);
+
+        return responseEntity;
+
+    }
 
 }
 
